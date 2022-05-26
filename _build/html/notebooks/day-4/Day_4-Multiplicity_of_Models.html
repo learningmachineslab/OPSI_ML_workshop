@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Multiplicity of Models &#8212; 2021 MSU REU Machine Learning Short Course</title>
+    <title>A Multiplicity of Models &#8212; 2022 Oslo PER Summer Institute Machine Learning Short Course</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -34,38 +31,40 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Solution - Getting Started with Pandas" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html" />
     <link rel="prev" title="What is Tuning and Validation?" href="Day_4-What_is_Tuning_and_Validation.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -74,44 +73,48 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">2021 MSU REU Machine Learning Short Course</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">2022 Oslo PER Summer Institute Machine Learning Short Course</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   2021 MSU REU Short Course on Machine Learning
+   2022 Oslo PER Summer Institute Machine Learning Short Course
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Schedule
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../schedule.html">
    Detailed Schedule
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Working with Data
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../day-1/Day-1_Getting-Started-with-Pandas.html">
    Getting Started with Pandas
@@ -123,12 +126,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Modeling Data
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../day-2/Day-2_Polynomial_Regression.html">
    Polynomial Regression
@@ -150,12 +153,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Evaluating Models
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Day_4-What_is_Tuning_and_Validation.html">
    What is Tuning and Validation?
@@ -167,12 +170,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Solutions
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html">
    Solution - Getting Started with Pandas
@@ -209,12 +212,12 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Acknowledgements
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../contributions.html">
    Contributions
@@ -222,6 +225,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -265,18 +269,18 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -285,21 +289,21 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/dannycab/MSU_REU_ML_course/main?urlpath=lab/tree/notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dannycab/OPSI_ML_workshop/main?urlpath=lab/tree/notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://jupyterhub.egr.msu.edu/hub/user-redirect/git-pull?repo=https://github.com/dannycab/MSU_REU_ML_course/docs/_build/html/index.html&urlpath=lab/tree/MSU_REU_ML_course/notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb&branch=main"><button type="button"
+        <a class="jupyterhub-button" href="https://jupyterhub.egr.msu.edu/hub/user-redirect/git-pull?repo=https://github.com/dannycab/OPSI_ML_workshop/docs/_build/html/index.html&urlpath=lab/tree/OPSI_ML_workshop/notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb&branch=main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../../_static/images/logo_jupyterhub.svg"
                     alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/dannycab/MSU_REU_ML_course/blob/main/notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/dannycab/OPSI_ML_workshop/blob/main/notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -311,14 +315,13 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#today-s-initial-imports">
    0. Today’s Initial Imports
@@ -431,17 +434,144 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>A Multiplicity of Models</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#today-s-initial-imports">
+   0. Today’s Initial Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-validating-a-logistic-regression-model">
+   1. Example: Validating a Logistic Regression Model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-classification-data">
+     1.1 Making classification data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-feature-spaces">
+     1.2 Plotting Feature Spaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-logistic-regression-model">
+     1.3 A Logistic Regression Model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-metric-zoo">
+       1.3.1 The Metric Zoo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#auc-and-the-roc-curve">
+     1.4 AUC and the ROC Curve
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-specific-tools-logistic-regression">
+     1.5 Model Specific Tools - Logistic Regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monte-carlo-validation">
+     1.5 Monte Carlo Validation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameter-tuning">
+   2. Parameter Tuning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results-of-a-grid-search">
+     2.1 Results of a Grid Search
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-about-other-classifiers">
+     2.2 What about other classifiers?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#knn">
+       2.2.1 KNN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linearsvc">
+       2.2.2 LinearSVC
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#random-forest">
+       2.2.3 Random Forest
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-about-other-kinds-of-data">
+   3. What about other kinds of data?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-it">
+     3.1 Plot it!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-to-try-other-models">
+     3.2 Time to try other models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-make-the-data-a-bit-messier">
+     3.3 Let’s make the data a bit messier.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#try-to-find-the-best-model-for-this-data">
+     3.4 Try to find the best model for this data
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="a-multiplicity-of-models">
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-multiplicity-of-models">
 <h1>A Multiplicity of Models<a class="headerlink" href="#a-multiplicity-of-models" title="Permalink to this headline">¶</a></h1>
 <p>We haven’t really talked too much about specific models or algorithms, that is something you can study on your own, but a warning – that liteature is extensive, so I’d suggest starting with YouTube videos.</p>
 <p>In general you might approach a given classification or regression problem with a number of different possible models to determine which is the most useful for your purposes (e.g., most accurate, least biased, etc.). A few potential models (<em>not exhaustive</em>) are listed below based on the type of problem they can solve:</p>
@@ -557,118 +687,118 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.121386</td>
-      <td>-1.012604</td>
-      <td>-0.075258</td>
-      <td>0.199372</td>
-      <td>-0.190978</td>
-      <td>-0.971368</td>
-      <td>-0.495713</td>
-      <td>1.150175</td>
-      <td>-1.033823</td>
-      <td>-0.098382</td>
-      <td>2.879308</td>
-      <td>0.381941</td>
-      <td>-2.229627</td>
-      <td>0.062326</td>
-      <td>2.826116</td>
-      <td>2.624505</td>
-      <td>0.654998</td>
-      <td>0.031581</td>
-      <td>2.600867</td>
-      <td>1.824353</td>
+      <td>-1.098192</td>
+      <td>1.862668</td>
+      <td>-0.820336</td>
+      <td>0.923235</td>
+      <td>-1.635116</td>
+      <td>3.033266</td>
+      <td>1.102672</td>
+      <td>1.109371</td>
+      <td>-0.636963</td>
+      <td>-0.530607</td>
+      <td>-2.724995</td>
+      <td>1.051503</td>
+      <td>1.275838</td>
+      <td>1.415821</td>
+      <td>-1.437744</td>
+      <td>0.430579</td>
+      <td>1.396506</td>
+      <td>-0.415690</td>
+      <td>1.048429</td>
+      <td>0.539890</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.682952</td>
-      <td>0.585554</td>
-      <td>-0.273655</td>
-      <td>-0.176524</td>
-      <td>0.436161</td>
-      <td>1.170085</td>
-      <td>-0.012274</td>
-      <td>1.293212</td>
-      <td>0.533805</td>
-      <td>-0.671569</td>
-      <td>0.789920</td>
-      <td>0.982573</td>
-      <td>0.530304</td>
-      <td>-0.965939</td>
-      <td>-1.528730</td>
-      <td>-1.522823</td>
-      <td>1.046418</td>
-      <td>-1.452430</td>
-      <td>-0.330473</td>
-      <td>-1.083777</td>
+      <td>-1.494346</td>
+      <td>0.239000</td>
+      <td>0.159170</td>
+      <td>-1.739487</td>
+      <td>0.467913</td>
+      <td>-2.804456</td>
+      <td>0.242897</td>
+      <td>-1.316452</td>
+      <td>-1.021794</td>
+      <td>-0.717969</td>
+      <td>-0.716208</td>
+      <td>-0.423315</td>
+      <td>3.524573</td>
+      <td>0.509658</td>
+      <td>-0.426725</td>
+      <td>-0.558559</td>
+      <td>-3.312709</td>
+      <td>0.387138</td>
+      <td>0.876832</td>
+      <td>-0.466315</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.386258</td>
-      <td>0.612666</td>
-      <td>-0.755672</td>
-      <td>0.449207</td>
-      <td>1.708749</td>
-      <td>0.810570</td>
-      <td>-1.375696</td>
-      <td>-2.040580</td>
-      <td>-0.708230</td>
-      <td>1.615772</td>
-      <td>-0.806893</td>
-      <td>-0.972255</td>
-      <td>0.307991</td>
-      <td>-2.130468</td>
-      <td>-0.313367</td>
-      <td>0.004000</td>
-      <td>-0.442117</td>
-      <td>1.280991</td>
-      <td>1.672467</td>
-      <td>1.375031</td>
+      <td>-0.215303</td>
+      <td>1.544691</td>
+      <td>0.104928</td>
+      <td>1.406746</td>
+      <td>-0.382356</td>
+      <td>1.751891</td>
+      <td>2.249555</td>
+      <td>-1.385713</td>
+      <td>-2.248036</td>
+      <td>0.758376</td>
+      <td>-1.142591</td>
+      <td>-0.663332</td>
+      <td>-1.225332</td>
+      <td>-3.673697</td>
+      <td>0.431339</td>
+      <td>0.485051</td>
+      <td>-3.084321</td>
+      <td>0.284271</td>
+      <td>0.050322</td>
+      <td>0.726006</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.296608</td>
-      <td>1.953867</td>
-      <td>1.026679</td>
-      <td>-0.309112</td>
-      <td>-0.891268</td>
-      <td>1.010587</td>
-      <td>-1.096396</td>
-      <td>2.254593</td>
-      <td>1.800123</td>
-      <td>0.256249</td>
-      <td>0.699026</td>
-      <td>0.775423</td>
-      <td>0.226179</td>
-      <td>0.362929</td>
-      <td>-0.978508</td>
-      <td>-0.189596</td>
-      <td>-0.292470</td>
-      <td>-0.289389</td>
-      <td>1.760122</td>
-      <td>0.229832</td>
+      <td>-0.481681</td>
+      <td>0.129601</td>
+      <td>-0.193861</td>
+      <td>0.771522</td>
+      <td>-0.803537</td>
+      <td>2.256499</td>
+      <td>-0.688190</td>
+      <td>-0.116758</td>
+      <td>-0.264766</td>
+      <td>1.278449</td>
+      <td>0.149068</td>
+      <td>0.705688</td>
+      <td>-0.253244</td>
+      <td>-0.892780</td>
+      <td>0.198981</td>
+      <td>-0.327501</td>
+      <td>0.016289</td>
+      <td>-0.917160</td>
+      <td>0.153633</td>
+      <td>0.050391</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.299612</td>
-      <td>-3.499056</td>
-      <td>-0.687828</td>
-      <td>0.997938</td>
-      <td>0.518028</td>
-      <td>-0.824665</td>
-      <td>0.325883</td>
-      <td>-1.761435</td>
-      <td>-0.977338</td>
-      <td>0.372439</td>
-      <td>-0.075346</td>
-      <td>0.666245</td>
-      <td>1.862117</td>
-      <td>0.611742</td>
-      <td>1.108199</td>
-      <td>-0.824673</td>
-      <td>-1.720296</td>
-      <td>-2.031922</td>
-      <td>-0.699521</td>
-      <td>0.754544</td>
+      <td>0.054113</td>
+      <td>-0.671382</td>
+      <td>0.463920</td>
+      <td>0.330192</td>
+      <td>0.186946</td>
+      <td>0.073881</td>
+      <td>1.024527</td>
+      <td>-0.154406</td>
+      <td>-0.636621</td>
+      <td>0.469392</td>
+      <td>0.600108</td>
+      <td>1.400121</td>
+      <td>1.086765</td>
+      <td>-0.118856</td>
+      <td>2.480812</td>
+      <td>0.708082</td>
+      <td>-1.559310</td>
+      <td>-0.240415</td>
+      <td>-0.336196</td>
+      <td>1.601558</td>
     </tr>
   </tbody>
 </table>
@@ -709,7 +839,7 @@
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
@@ -717,7 +847,7 @@
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
@@ -792,8 +922,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[110  15]
- [ 18 107]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[101  38]
+ [ 15  96]]
 </pre></div>
 </div>
 </div>
@@ -812,12 +942,12 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       0.86      0.88      0.87       125
-           1       0.88      0.86      0.87       125
+           0       0.87      0.73      0.79       139
+           1       0.72      0.86      0.78       111
 
-    accuracy                           0.87       250
-   macro avg       0.87      0.87      0.87       250
-weighted avg       0.87      0.87      0.87       250
+    accuracy                           0.79       250
+   macro avg       0.79      0.80      0.79       250
+weighted avg       0.80      0.79      0.79       250
 </pre></div>
 </div>
 </div>
@@ -846,7 +976,7 @@ weighted avg       0.87      0.87      0.87       250
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7f08052ac0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7e886a3760&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Day_4-Multiplicity_of_Models_19_1.png" src="../../_images/Day_4-Multiplicity_of_Models_19_1.png" />
@@ -872,14 +1002,14 @@ weighted avg       0.87      0.87      0.87       250
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Coefficients: [[ 0.2283998   1.08155402  0.18344802  0.23375742  0.19058005  0.02407551
-  -0.10716194  0.10982789  0.69257461 -0.09989858  1.00368293  0.15315624
-   0.03276013  0.18303375  0.6443247  -0.03969424  0.1199457   0.58322484
-  -0.06234915  0.20295521]]
-Odds Ratios: [1.25658761 2.9492592  1.20135251 1.263338   1.20995123 1.02436767
- 0.89838018 1.11608596 1.99885519 0.90492919 2.72831152 1.16550706
- 1.03330265 1.20085494 1.90470035 0.96108325 1.12743563 1.79180741
- 0.93955479 1.22501759]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Coefficients: [[-0.02066238  0.04384379 -0.12961906 -0.70813244 -0.05648027 -0.03975368
+  -0.08404495 -0.26998316  0.05766125  0.0461145   0.07626382  0.11417335
+  -0.01014345  0.1069069  -0.07461901  0.08627959  0.80801539 -0.02552695
+  -0.0454346   0.0338424 ]]
+Odds Ratios: [0.97954962 1.04481913 0.87842999 0.49256323 0.94508513 0.96102613
+ 0.91938993 0.76339235 1.05935607 1.04719431 1.07924727 1.12094642
+ 0.98990783 1.11283065 0.92809702 1.09011107 2.24345118 0.97479611
+ 0.9555821  1.03442157]
 </pre></div>
 </div>
 </div>
@@ -931,13 +1061,12 @@ Odds Ratios: [1.25658761 2.9492592  1.20135251 1.263338   1.20995123 1.02436767
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy:  0.864
-AUC: 0.8640552995391706
-Coefs: [[ 2.27612006e-01  1.11726785e+00  1.09931180e-01  1.36138421e-01
-   3.11269059e-02  1.05934669e-03 -4.49581128e-02  1.10293347e-01
-   7.07193676e-01 -9.91998883e-02  1.03036989e+00  1.63856726e-01
-   4.73134529e-03  2.09508781e-01  6.28831645e-01 -7.71049369e-02
-   1.58684101e-01  5.81494974e-01 -4.64952536e-02  1.48196409e-01]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy:  0.728
+AUC: 0.7283666154633897
+Coefs: [[-0.11143153  0.03724794 -0.03295985 -0.8124892  -0.06162852 -0.14842235
+  -0.10550263 -0.33206745 -0.09438157  0.1316189   0.10546192  0.17252506
+   0.02304705  0.10174161 -0.11080682 -0.00249266  0.79716605 -0.07876609
+  -0.06500562  0.04170595]]
 </pre></div>
 </div>
 </div>
@@ -1091,7 +1220,7 @@ Traceback (most recent call last):
 ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties, got elasticnet penalty.
 
   warnings.warn(&quot;Estimator fit failed. The score on this train-test&quot;
-/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.857   nan 0.858]
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.769   nan 0.77 ]
   warnings.warn(
 </pre></div>
 </div>
@@ -1115,7 +1244,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression(penalty=&#39;none&#39;)
-0.858
+0.77
 </pre></div>
 </div>
 </div>
@@ -1163,8 +1292,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=12)
-0.9040000000000001
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=8)
+0.874
 </pre></div>
 </div>
 </div>
@@ -1186,7 +1315,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.892, 0.8935897435897436)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.872, 0.8733974358974359)
 </pre></div>
 </div>
 </div>
@@ -1227,8 +1356,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8987200000000002 +/- 0.01869228717947594
-Mean AUC: 0.8987453611496851 +/- 0.018246137123583965
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8624266666666667 +/- 0.017450251828810076
+Mean AUC: 0.8626038342309603 +/- 0.01755494551707241
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;AUC&#39;)
@@ -1309,28 +1438,28 @@ Mean AUC: 0.8987453611496851 +/- 0.018246137123583965
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.899405</td>
-      <td>-0.437116</td>
+      <td>-0.425779</td>
+      <td>0.904827</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.189199</td>
-      <td>0.777305</td>
+      <td>0.710509</td>
+      <td>0.367664</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.050232</td>
-      <td>0.798421</td>
+      <td>-0.888136</td>
+      <td>0.459580</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.929776</td>
-      <td>0.368125</td>
+      <td>0.149905</td>
+      <td>-0.785830</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.583175</td>
-      <td>-0.547638</td>
+      <td>-0.010053</td>
+      <td>-0.799937</td>
     </tr>
   </tbody>
 </table>
@@ -1375,11 +1504,11 @@ Mean AUC: 0.8987453611496851 +/- 0.018246137123583965
     </tr>
     <tr>
       <th>2</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1427,7 +1556,7 @@ Mean AUC: 0.8987453611496851 +/- 0.018246137123583965
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
-0.45199999999999996
+0.46399999999999997
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:610: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
@@ -1540,7 +1669,7 @@ Traceback (most recent call last):
 ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties, got elasticnet penalty.
 
   warnings.warn(&quot;Estimator fit failed. The score on this train-test&quot;
-/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.452   nan 0.452]
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.464   nan 0.464]
   warnings.warn(
 </pre></div>
 </div>
@@ -1574,7 +1703,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f7f08146ee0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f7e383bb310&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Day_4-Multiplicity_of_Models_57_1.png" src="../../_images/Day_4-Multiplicity_of_Models_57_1.png" />
@@ -1617,36 +1746,42 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="Day_4-What_is_Tuning_and_Validation.html" title="previous page">What is Tuning and Validation?</a>
-    <a class='right-next' id="next-link" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html" title="next page">Solution - Getting Started with Pandas</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Day_4-What_is_Tuning_and_Validation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">What is Tuning and Validation?</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Solution - Getting Started with Pandas</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Danny Caballero, Morten Hjorth-Jensen, Julie Butler, and Jane Kim<br/>
-        
-            &copy; Copyright 2021, Michigan State University.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Danny Caballero, Rachel Henderson<br/>
+    
+        &copy; Copyright 2022, Michigan State University.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
   </body>
 </html>

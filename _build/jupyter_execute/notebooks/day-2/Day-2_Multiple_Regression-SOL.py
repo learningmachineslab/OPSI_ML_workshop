@@ -48,13 +48,13 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - Read in the data into a DataFrame and print the `head()`.
 
-# In[2]:
+# In[3]:
 
 
 ## your code here
 
 
-# In[3]:
+# In[4]:
 
 
 ### ANSWER ###
@@ -93,13 +93,13 @@ poverty_df.head()
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - Convert the missing entries in the GNP column to `np.nan` and show the head of your modified DataFrame. Also print the `dtypes` to show that the column has change type.
 
-# In[4]:
+# In[5]:
 
 
 ## your code here
 
 
-# In[5]:
+# In[6]:
 
 
 ### ANSWER ###
@@ -114,7 +114,7 @@ poverty_df.dtypes
 # 
 # Now that "bad values" are marked as `numpy.nan`, we can use the DataFrame method `fillna` to change those values. For example:
 
-# In[6]:
+# In[7]:
 
 
 ## Uncomment to run
@@ -124,7 +124,7 @@ poverty_df["GNP"].fillna(0)
 
 # returns a new DataFrame where all the `np.nan` in the GNP column are replaced with 0. You can do other things are well, for example:
 
-# In[7]:
+# In[8]:
 
 
 ## Uncomment to run
@@ -138,7 +138,7 @@ poverty_df.fillna({"GNP": poverty_df["GNP"].mean() })
 # 
 # Finally, if you decide that the right thing to do is **remove** any row with a `np.nan` value, we can use the `.dropna` method of DataFrames as shown below:
 
-# In[8]:
+# In[9]:
 
 
 ## Uncomment to run
@@ -167,13 +167,13 @@ print(len(poverty_df), len(poverty_df_dropped))
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - Make an linear model (did you split your data?) that predicts "Infant Mortality" using the other variables (dropping the "Country" column) and print the `.r2_score` of that process. 
 
-# In[9]:
+# In[10]:
 
 
 # your code here
 
 
-# In[10]:
+# In[11]:
 
 
 ### ANSWER ###
@@ -200,13 +200,13 @@ print('r2: ', round(r2,4))
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - Make the plots mentioned above. How well does your model fit your data? What can you conclude from this graph?
 
-# In[11]:
+# In[12]:
 
 
 ### your code here
 
 
-# In[12]:
+# In[13]:
 
 
 ### ANSWER ###
@@ -231,13 +231,13 @@ plt.plot([-50,200],[-50,200], color='k', lw=3)
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - use `pandas` built=in correlation function (`.corr()`) to find the top 3 variables that correlate strongly with "Infant Mortality"
 
-# In[13]:
+# In[14]:
 
 
 # your code here
 
 
-# In[14]:
+# In[15]:
 
 
 ### ANSWER ###
@@ -247,13 +247,13 @@ poverty_df_dropped.corr()
 
 # <font size=8 color="#009600">&#9998;</font> Do This - Redo the model with only the top three features you found above vs "Infant Mortality". Print the `.r2_score`, how does it compare to the full model?
 
-# In[15]:
+# In[16]:
 
 
 ### your code here
 
 
-# In[16]:
+# In[17]:
 
 
 ### ANSWER ###
@@ -275,13 +275,13 @@ print('r2: ', round(r2,4))
 
 # <font size=8 color="#009600">&#9998;</font> Do This -  Make the same comparison plot mentioned above. How well does your model fit your data? What can you conclude from this graph? Can you compare it to the previous fit?
 
-# In[17]:
+# In[18]:
 
 
 ### your code here
 
 
-# In[18]:
+# In[19]:
 
 
 ### ANSWER ###
