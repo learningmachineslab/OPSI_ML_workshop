@@ -69,7 +69,3 @@
 
 * [Day 4 notebook - What is Tuning and Validation?](./notebooks/day-4/Day_4-What_is_Tuning_and_Validation.ipynb)
 * [Day 4 notebook - A Multiplicity of Models](./notebooks/day-4/Day_4-Multiplicity_of_Models.ipynb)
-
-## Day 5 - Advanced topics 1
-
-## Day 6 - Advanced topics 2
