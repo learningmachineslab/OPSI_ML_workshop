@@ -71,9 +71,9 @@ from pandas.plotting import scatter_matrix
 # 
 # **&#9989; Do This:**  To get started, **you'll need to download the following two files**:
 # 
-# `https://raw.githubusercontent.com/dannycab/MSU_REU_ML_course/main/notebooks/day-1/iris.data`
+# __[iris.data](https://bit.ly/3GEII5H)__
 # 
-# `https://raw.githubusercontent.com/dannycab/MSU_REU_ML_course/main/notebooks/day-1/iris.names`
+# __[iris.names](https://bit.ly/3m7Kenr)__
 # 
 # Once you've done so, you should have access to the following : `iris.data` and `iris.names`. Open them both and discuss what you see. This is a good opportunity to use you favorite text editor or use something new. Feel free to ask your group members or instructors what they prefer to use.
 
@@ -197,48 +197,6 @@ pd.set_option('display.max_columns', 500)
 
 
 # <font size=+3>&#9998;</font> Do This - Erase the contents of this cell and replace it with your answer. How effective your Boolean mask separation of the 3 species? Any ideas for improvements?
-
-# ---
-# ## 4. What if we didn't have Pandas to read in this data?
-# 
-# While Pandas makes life pretty easy for reading in csv and other file formats, all of this functionality is built on top of the standard Python capability. Python can natively open and read files lines by line, but working with files in this context might not be something you're familiar with. For this part of the notebook, you're going to explore how you can use **just Python** without any special packages to read in the iris data.
-# 
-# ### 4.1 Code review: Loading the iris data with basic Python
-# 
-# **&#9989; Do This:**  To get started, **you'll need to download the following file**:
-# 
-# `https://raw.githubusercontent.com/dannycab/MSU_REU_ML_course/main/code_samples/my_pandas.py`
-# 
-# **&#9989; Do This:** Once you have the file downloaded and in the same location as this notebook **open the file and read through it carefully**. As you read the file **add comments to the lines marked with `#` to explain what you understand the code to be doing**. 
-# 
-# There may be bits of Python code that you've not encounted before so make sure to **talk with your group** and **search for information on the internet** as you try to make sense of the code!
-# 
-# Jot down some of the things you learned or struggled you had in the cell below.
-
-# <font size=+3>&#9998;</font> Do This - Erase the contents of this cell and make note of anything new you learned from reading through the code or highlight anything you don't feel like you understand.
-
-# ### 4.2 Using the code: importing the functions and reading in the data
-# 
-# Now that you have the hand-made functions for reading in the iris data, we're going to practice **importing functions from script and then using them in your notebook**.
-# 
-# The technique for doing this is the following:
-# 
-# ``` python
-# from [PACKAGENAME] import [FUNCTION]
-# ```
-# Where "PACKAGENAME" is the name of the script but without the ".py" part. So for `my_pandas.py`, the PACKAGENAME would be `my_pandas`. Then the FUNCTION is the name of the function from the script that you want to import, e.g. `my_pandas_idx`.
-# 
-# **We'll using this functionality in the future, so make sure you feel comfortable with this idea.**
-# 
-# **&#9989; Do This:** Import the `my_pandas` function and the `my_pandas_idx` function (you can do this on one line, check to see if anyone one in your group knows how). Then, **use these two functions to first read in the data and then extract just the second column from the data**.
-# 
-# Once you've done this, **print the first three rows of the iris data and all of the second column.**
-
-# In[10]:
-
-
-# Put your code here
-
 
 # ---
 # ### &#128721; You made it to the end!

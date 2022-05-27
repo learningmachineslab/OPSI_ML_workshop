@@ -8,7 +8,7 @@ book:
 from_scratch:
 
 	## Builds without cached files
-	jupyter-book build -all ${BOOK_DIR}
+	jupyter-book build --all ${BOOK_DIR}
 
 public:
 

@@ -401,23 +401,6 @@ const thebe_selector_output = ".output, .cell_output"
      3.3 Separating species of irises
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-if-we-didn-t-have-pandas-to-read-in-this-data">
-   4. What if we didn’t have Pandas to read in this data?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-review-loading-the-iris-data-with-basic-python">
-     4.1 Code review: Loading the iris data with basic Python
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-the-code-importing-the-functions-and-reading-in-the-data">
-     4.2 Using the code: importing the functions and reading in the data
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#you-made-it-to-the-end">
      🛑 You made it to the end!
@@ -526,23 +509,6 @@ const thebe_selector_output = ".output, .cell_output"
      3.3 Separating species of irises
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-if-we-didn-t-have-pandas-to-read-in-this-data">
-   4. What if we didn’t have Pandas to read in this data?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-review-loading-the-iris-data-with-basic-python">
-     4.1 Code review: Loading the iris data with basic Python
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-the-code-importing-the-functions-and-reading-in-the-data">
-     4.2 Using the code: importing the functions and reading in the data
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#you-made-it-to-the-end">
      🛑 You made it to the end!
@@ -619,8 +585,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h4>The Iris data<a class="headerlink" href="#the-iris-data" title="Permalink to this headline">¶</a></h4>
 <p>The iris data set is pretty straight forward (review the wikipedia link above if you haven’t yet), especially if someone has done all of the data wrangling and cleaning for you. To make it a little more interesting we provide it in a raw form that you might encounter with other data.</p>
 <p><strong>✅ Do This:</strong>  To get started, <strong>you’ll need to download the following two files</strong>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/dannycab/MSU_REU_ML_course/main/notebooks/day-1/iris.data</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/dannycab/MSU_REU_ML_course/main/notebooks/day-1/iris.names</span></code></p>
+<p><strong><a class="reference external" href="https://bit.ly/3GEII5H">iris.data</a></strong></p>
+<p><strong><a class="reference external" href="https://bit.ly/3m7Kenr">iris.names</a></strong></p>
 <p>Once you’ve done so, you should have access to the following : <code class="docutils literal notranslate"><span class="pre">iris.data</span></code> and <code class="docutils literal notranslate"><span class="pre">iris.names</span></code>. Open them both and discuss what you see. This is a good opportunity to use you favorite text editor or use something new. Feel free to ask your group members or instructors what they prefer to use.</p>
 <p>✅ <strong>Question 3</strong>: Describe the data and the information in the names file. What characteristics are provided there? Perhaps the iris dataset link above will help.</p>
 <p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer to the above question!  (double-click on this text to edit this cell, and hit shift+enter to save the text). <strong>Practice using appropriate Markdown formating to make your answer’s easy to read.</strong></p>
@@ -1078,21 +1044,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">iris_df</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>                           <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>                           <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">);</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1">## Seaborn (NOTE THIS SOLVES THE NEXT PROBLEM AUTOMATICALLY)</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;ticks&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">iris_df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x11d7a6d10&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Day-1_Exploring-data-with-Pandas-SOL_25_1.png" src="../../_images/Day-1_Exploring-data-with-Pandas-SOL_25_1.png" />
+<img alt="../../_images/Day-1_Exploring-data-with-Pandas-SOL_25_2.png" src="../../_images/Day-1_Exploring-data-with-Pandas-SOL_25_2.png" />
 </div>
 </div>
 <p>✅ <strong>Question 4</strong>: Does this visualization help you to determine the features that might be useful for classification? Why or why not?</p>
@@ -1923,39 +1879,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p><font size=+3>✎</font> Do This - Erase the contents of this cell and replace it with your answer. How effective your Boolean mask separation of the 3 species? Any ideas for improvements?</p>
 </div>
-</div>
-<hr class="docutils" />
-<div class="section" id="what-if-we-didn-t-have-pandas-to-read-in-this-data">
-<h2>4. What if we didn’t have Pandas to read in this data?<a class="headerlink" href="#what-if-we-didn-t-have-pandas-to-read-in-this-data" title="Permalink to this headline">¶</a></h2>
-<p>While Pandas makes life pretty easy for reading in csv and other file formats, all of this functionality is built on top of the standard Python capability. Python can natively open and read files lines by line, but working with files in this context might not be something you’re familiar with. For this part of the notebook, you’re going to explore how you can use <strong>just Python</strong> without any special packages to read in the iris data.</p>
-<div class="section" id="code-review-loading-the-iris-data-with-basic-python">
-<h3>4.1 Code review: Loading the iris data with basic Python<a class="headerlink" href="#code-review-loading-the-iris-data-with-basic-python" title="Permalink to this headline">¶</a></h3>
-<p><strong>✅ Do This:</strong>  To get started, <strong>you’ll need to download the following file</strong>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/dannycab/MSU_REU_ML_course/main/code_samples/my_pandas.py</span></code></p>
-<p><strong>✅ Do This:</strong> Once you have the file downloaded and in the same location as this notebook <strong>open the file and read through it carefully</strong>. As you read the file <strong>add comments to the lines marked with <code class="docutils literal notranslate"><span class="pre">#</span></code> to explain what you understand the code to be doing</strong>.</p>
-<p>There may be bits of Python code that you’ve not encounted before so make sure to <strong>talk with your group</strong> and <strong>search for information on the internet</strong> as you try to make sense of the code!</p>
-<p>Jot down some of the things you learned or struggled you had in the cell below.</p>
-<p><font size=+3>✎</font> Do This - Erase the contents of this cell and make note of anything new you learned from reading through the code or highlight anything you don’t feel like you understand.</p>
-</div>
-<div class="section" id="using-the-code-importing-the-functions-and-reading-in-the-data">
-<h3>4.2 Using the code: importing the functions and reading in the data<a class="headerlink" href="#using-the-code-importing-the-functions-and-reading-in-the-data" title="Permalink to this headline">¶</a></h3>
-<p>Now that you have the hand-made functions for reading in the iris data, we’re going to practice <strong>importing functions from script and then using them in your notebook</strong>.</p>
-<p>The technique for doing this is the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="p">[</span><span class="n">PACKAGENAME</span><span class="p">]</span> <span class="kn">import</span> <span class="p">[</span><span class="n">FUNCTION</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Where “PACKAGENAME” is the name of the script but without the “.py” part. So for <code class="docutils literal notranslate"><span class="pre">my_pandas.py</span></code>, the PACKAGENAME would be <code class="docutils literal notranslate"><span class="pre">my_pandas</span></code>. Then the FUNCTION is the name of the function from the script that you want to import, e.g. <code class="docutils literal notranslate"><span class="pre">my_pandas_idx</span></code>.</p>
-<p><strong>We’ll using this functionality in the future, so make sure you feel comfortable with this idea.</strong></p>
-<p><strong>✅ Do This:</strong> Import the <code class="docutils literal notranslate"><span class="pre">my_pandas</span></code> function and the <code class="docutils literal notranslate"><span class="pre">my_pandas_idx</span></code> function (you can do this on one line, check to see if anyone one in your group knows how). Then, <strong>use these two functions to first read in the data and then extract just the second column from the data</strong>.</p>
-<p>Once you’ve done this, <strong>print the first three rows of the iris data and all of the second column.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Put your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <hr class="docutils" />
 <div class="section" id="you-made-it-to-the-end">
 <h3>🛑 You made it to the end!<a class="headerlink" href="#you-made-it-to-the-end" title="Permalink to this headline">¶</a></h3>
@@ -1974,16 +1897,16 @@ const thebe_selector_output = ".output, .cell_output"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jupyterbook"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "jupyterbook",
             path: "./notebooks/day-1"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jupyterbook'</script>
 
               </div>
               
