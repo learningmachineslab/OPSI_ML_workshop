@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Contributions" href="../../contributions.html" />
+    <link rel="next" title="Regression" href="../regression_tutorial/regression_guided-SOL.html" />
     <link rel="prev" title="Solution - Classification using K Nearest Neighbors" href="../day-3/day-3_KNN_classification-SOL.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -172,6 +172,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Regression Tutorial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regression_tutorial/regression_guided.html">
+   Regression
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Solutions
  </span>
 </p>
@@ -209,6 +221,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Solution - A Multiplicity of Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regression_tutorial/regression_guided-SOL.html">
+   Regression
   </a>
  </li>
 </ul>
@@ -687,118 +704,118 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.347554</td>
-      <td>0.740806</td>
-      <td>-0.628381</td>
-      <td>0.802089</td>
-      <td>1.266621</td>
-      <td>0.737046</td>
-      <td>-0.847065</td>
-      <td>0.495548</td>
-      <td>0.826655</td>
-      <td>-0.725520</td>
-      <td>1.159862</td>
-      <td>-1.372090</td>
-      <td>-0.764997</td>
-      <td>-1.478697</td>
-      <td>1.959377</td>
-      <td>0.172488</td>
-      <td>0.633958</td>
-      <td>0.665873</td>
-      <td>1.980983</td>
-      <td>-0.064682</td>
+      <td>0.612694</td>
+      <td>-0.103132</td>
+      <td>-0.267346</td>
+      <td>0.153512</td>
+      <td>0.516020</td>
+      <td>1.251561</td>
+      <td>0.848281</td>
+      <td>5.009086</td>
+      <td>-1.363851</td>
+      <td>0.776745</td>
+      <td>-0.439468</td>
+      <td>0.050744</td>
+      <td>1.317167</td>
+      <td>-0.170907</td>
+      <td>-1.348628</td>
+      <td>-3.181531</td>
+      <td>0.888695</td>
+      <td>2.701562</td>
+      <td>3.315473</td>
+      <td>-0.287589</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.230346</td>
-      <td>-1.108258</td>
-      <td>-1.202362</td>
-      <td>-0.557393</td>
-      <td>-0.404541</td>
-      <td>-0.133159</td>
-      <td>-0.770560</td>
-      <td>-0.805261</td>
-      <td>0.467853</td>
-      <td>-0.191173</td>
-      <td>-0.790980</td>
-      <td>-1.116663</td>
-      <td>1.099748</td>
-      <td>-1.248816</td>
-      <td>-0.672387</td>
-      <td>0.246467</td>
-      <td>0.721242</td>
-      <td>-1.028707</td>
-      <td>-1.618819</td>
-      <td>1.361025</td>
+      <td>-0.725912</td>
+      <td>1.997657</td>
+      <td>0.074594</td>
+      <td>-2.577062</td>
+      <td>-0.232693</td>
+      <td>-1.881299</td>
+      <td>-0.284693</td>
+      <td>1.363553</td>
+      <td>1.100933</td>
+      <td>-0.922893</td>
+      <td>0.720922</td>
+      <td>-2.065911</td>
+      <td>-0.102098</td>
+      <td>0.211984</td>
+      <td>-0.801021</td>
+      <td>-1.387583</td>
+      <td>-0.905420</td>
+      <td>1.405053</td>
+      <td>-0.175970</td>
+      <td>-0.075030</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-1.932296</td>
-      <td>-0.508929</td>
-      <td>-1.822027</td>
-      <td>0.315505</td>
-      <td>-2.320453</td>
-      <td>-0.998306</td>
-      <td>0.378334</td>
-      <td>0.297119</td>
-      <td>-2.020053</td>
-      <td>-0.465122</td>
-      <td>-1.316142</td>
-      <td>-1.692964</td>
-      <td>0.003946</td>
-      <td>1.208978</td>
-      <td>1.083676</td>
-      <td>-0.954305</td>
-      <td>-0.714546</td>
-      <td>0.146578</td>
-      <td>-0.009323</td>
-      <td>1.532967</td>
+      <td>1.192186</td>
+      <td>0.335299</td>
+      <td>-0.157549</td>
+      <td>-0.004746</td>
+      <td>1.369081</td>
+      <td>-1.357544</td>
+      <td>-1.641488</td>
+      <td>0.992889</td>
+      <td>-0.065464</td>
+      <td>0.037287</td>
+      <td>0.480859</td>
+      <td>0.681286</td>
+      <td>0.052300</td>
+      <td>0.836286</td>
+      <td>0.151800</td>
+      <td>-0.549929</td>
+      <td>1.161110</td>
+      <td>0.687438</td>
+      <td>1.756267</td>
+      <td>0.393012</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.382817</td>
-      <td>-0.496006</td>
-      <td>0.972872</td>
-      <td>0.975769</td>
-      <td>0.505965</td>
-      <td>0.951776</td>
-      <td>-0.564738</td>
-      <td>-1.011485</td>
-      <td>-0.286046</td>
-      <td>-1.718770</td>
-      <td>1.818125</td>
-      <td>-1.350592</td>
-      <td>0.380820</td>
-      <td>-0.106474</td>
-      <td>0.121483</td>
-      <td>0.177739</td>
-      <td>0.794547</td>
-      <td>0.001506</td>
-      <td>0.299735</td>
-      <td>1.082935</td>
+      <td>-1.639626</td>
+      <td>-0.448213</td>
+      <td>-0.539223</td>
+      <td>-0.418453</td>
+      <td>0.711005</td>
+      <td>-1.779812</td>
+      <td>-0.648124</td>
+      <td>0.528442</td>
+      <td>0.578592</td>
+      <td>1.000328</td>
+      <td>-1.524049</td>
+      <td>1.582335</td>
+      <td>0.165979</td>
+      <td>1.084902</td>
+      <td>-0.863999</td>
+      <td>-0.665511</td>
+      <td>-0.566369</td>
+      <td>0.405010</td>
+      <td>-1.509371</td>
+      <td>0.718972</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.304526</td>
-      <td>0.101036</td>
-      <td>-0.289854</td>
-      <td>-0.637056</td>
-      <td>-1.462957</td>
-      <td>-0.085408</td>
-      <td>1.279113</td>
-      <td>0.948734</td>
-      <td>-2.524094</td>
-      <td>-0.735786</td>
-      <td>0.719322</td>
-      <td>0.398050</td>
-      <td>-0.545678</td>
-      <td>0.161992</td>
-      <td>0.296086</td>
-      <td>-0.139990</td>
-      <td>-1.380007</td>
-      <td>-0.498711</td>
-      <td>-0.725925</td>
-      <td>0.863566</td>
+      <td>1.545687</td>
+      <td>-1.445203</td>
+      <td>-0.781868</td>
+      <td>0.824983</td>
+      <td>0.773158</td>
+      <td>1.097341</td>
+      <td>0.108031</td>
+      <td>0.087304</td>
+      <td>2.005362</td>
+      <td>-0.799365</td>
+      <td>-0.227030</td>
+      <td>-0.330740</td>
+      <td>-0.024312</td>
+      <td>1.386112</td>
+      <td>-0.062559</td>
+      <td>0.292620</td>
+      <td>2.614725</td>
+      <td>-0.115821</td>
+      <td>1.601066</td>
+      <td>1.086189</td>
     </tr>
   </tbody>
 </table>
@@ -835,7 +852,7 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -843,7 +860,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tr>
     <tr>
       <th>2</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
@@ -851,7 +868,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -922,8 +939,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[115   5]
- [ 14 116]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[106  21]
+ [ 19 104]]
 </pre></div>
 </div>
 </div>
@@ -942,12 +959,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       0.89      0.96      0.92       120
-           1       0.96      0.89      0.92       130
+           0       0.85      0.83      0.84       127
+           1       0.83      0.85      0.84       123
 
-    accuracy                           0.92       250
-   macro avg       0.93      0.93      0.92       250
-weighted avg       0.93      0.92      0.92       250
+    accuracy                           0.84       250
+   macro avg       0.84      0.84      0.84       250
+weighted avg       0.84      0.84      0.84       250
 </pre></div>
 </div>
 </div>
@@ -976,7 +993,7 @@ weighted avg       0.93      0.92      0.92       250
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb6f8befee0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa6a00ce790&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Day_4-Multiplicity_of_Models-SOL_19_1.png" src="../../_images/Day_4-Multiplicity_of_Models-SOL_19_1.png" />
@@ -1002,14 +1019,14 @@ weighted avg       0.93      0.92      0.92       250
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Coefficients: [[-0.08396169 -0.14004804  0.03086569  0.09219237 -0.20784204 -0.06700534
-   1.32716927  0.06892792 -0.53603321 -0.03651924 -1.31400375  1.16485069
-  -0.15430981 -0.10179373 -0.16806916 -0.03266712  0.08702661  0.02692549
-  -0.02209651  0.02904682]]
-Odds Ratios: [0.91946648 0.86931647 1.03134697 1.09657576 0.81233535 0.93519021
- 3.77035542 1.07135899 0.58506449 0.96413954 0.26874192 3.20544423
- 0.85700647 0.90321584 0.84529538 0.96786069 1.09092571 1.02729125
- 0.97814583 1.0294728 ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Coefficients: [[ 0.28648194 -0.15926342  0.1134972  -0.16133451 -0.07551187 -0.04623385
+   0.02590664  0.32990226  0.05113671 -0.12060272  0.14801497  0.16053251
+   0.73469794 -0.28129667 -0.10123816  0.77144284  0.01855754 -1.2364377
+  -0.21532248 -0.02769494]]
+Odds Ratios: [1.33173411 0.85277169 1.12018875 0.85100735 0.92726872 0.95481865
+ 1.02624514 1.39083219 1.05246676 0.88638603 1.15953026 1.17413594
+ 2.08485214 0.75480437 0.90371778 2.1628847  1.0187308  0.29041693
+ 0.80628139 0.97268504]
 </pre></div>
 </div>
 </div>
@@ -1082,13 +1099,12 @@ Odds Ratios: [0.91946648 0.86931647 1.03134697 1.09657576 0.81233535 0.93519021
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy:  0.912
-AUC: 0.9118589743589742
-Coefs: [[-4.99285396e-02 -1.51107210e-01  4.38726241e-02  1.95024414e-01
-  -1.74754797e-01 -7.91025609e-05  1.37049954e+00 -1.72633200e-02
-  -5.31111065e-01 -3.79712427e-02 -1.36204935e+00  1.17516558e+00
-  -3.78883617e-02 -1.18229638e-01  1.23920002e-02 -6.06318426e-02
-   1.07711861e-01 -8.31550396e-02 -5.88909654e-02  1.57712296e-01]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy:  0.88
+AUC: 0.880097304910057
+Coefs: [[ 0.25439842 -0.07382031  0.09365829 -0.05001636 -0.03492446 -0.06413302
+   0.03060601  0.30467016  0.05482755 -0.12068881  0.05412923  0.31332987
+   0.69180165 -0.10037106 -0.06209718  0.71336808 -0.01739148 -1.14956494
+  -0.19449412  0.00931756]]
 </pre></div>
 </div>
 </div>
@@ -1170,16 +1186,26 @@ Coefs: [[-4.99285396e-02 -1.51107210e-01  4.38726241e-02  1.95024414e-01
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8990400000000001 +/- 0.01556529472897961
-Mean AUC: 0.8994652263303454 +/- 0.015557706147943507
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8376399999999999 +/- 0.01888148299260415
+Mean AUC: 0.8379295179018895 +/- 0.01904418070282785
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/numpy/core/_methods.py:232: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+&lt;ipython-input-18-41a35c4ff664&gt;:26: RuntimeWarning: overflow encountered in exp
+  plt.errorbar(np.arange(20), np.exp(mean_coef), yerr=np.exp(std_coef)/np.sqrt(len(std_coef)), fmt=&quot;s&quot;)
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/matplotlib/axes/_axes.py:3411: RuntimeWarning: invalid value encountered in double_scalars
+  low = [v if lo else v - e for v, e, lo in zip(data, a, lolims)]
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/numpy/core/_asarray.py:102: UserWarning: Warning: converting a masked element to nan.
+  return array(a, dtype, copy=False, order=order)
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Odds Ratio&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/Day_4-Multiplicity_of_Models-SOL_33_2.png" src="../../_images/Day_4-Multiplicity_of_Models-SOL_33_2.png" />
 <img alt="../../_images/Day_4-Multiplicity_of_Models-SOL_33_3.png" src="../../_images/Day_4-Multiplicity_of_Models-SOL_33_3.png" />
 <img alt="../../_images/Day_4-Multiplicity_of_Models-SOL_33_4.png" src="../../_images/Day_4-Multiplicity_of_Models-SOL_33_4.png" />
+<img alt="../../_images/Day_4-Multiplicity_of_Models-SOL_33_5.png" src="../../_images/Day_4-Multiplicity_of_Models-SOL_33_5.png" />
 </div>
 </div>
 </div>
@@ -1314,7 +1340,7 @@ Traceback (most recent call last):
 ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties, got elasticnet penalty.
 
   warnings.warn(&quot;Estimator fit failed. The score on this train-test&quot;
-/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.899   nan 0.899]
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.842   nan 0.841]
   warnings.warn(
 </pre></div>
 </div>
@@ -1338,7 +1364,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
-0.899
+0.842
 </pre></div>
 </div>
 </div>
@@ -1386,8 +1412,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=14)
-0.885
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=7)
+0.9110000000000001
 </pre></div>
 </div>
 </div>
@@ -1409,7 +1435,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.868, 0.8682692307692308)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.912, 0.9116380695328065)
 </pre></div>
 </div>
 </div>
@@ -1450,8 +1476,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8788400000000002 +/- 0.02031192753039457
-Mean AUC: 0.8791384091624616 +/- 0.02023653796329816
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.90656 +/- 0.01794676572533336
+Mean AUC: 0.9068908227569153 +/- 0.01789355995825222
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;AUC&#39;)
@@ -1491,8 +1517,8 @@ Mean AUC: 0.8791384091624616 +/- 0.02023653796329816
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinearSVC(C=0.01, max_iter=50000)
-0.9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinearSVC(C=1, max_iter=50000)
+0.8400000000000001
 </pre></div>
 </div>
 </div>
@@ -1515,7 +1541,7 @@ Mean AUC: 0.8791384091624616 +/- 0.02023653796329816
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.932, 0.9304050567595459)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.824, 0.8243589743589743)
 </pre></div>
 </div>
 </div>
@@ -1558,8 +1584,8 @@ Mean AUC: 0.8791384091624616 +/- 0.02023653796329816
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8989333333333336 +/- 0.015766067641897558
-Mean AUC: 0.8990842761200626 +/- 0.015740526971611123
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8366533333333334 +/- 0.021953887026118068
+Mean AUC: 0.8368508073669565 +/- 0.021975315690476994
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;AUC&#39;)
@@ -1600,8 +1626,8 @@ Mean AUC: 0.8990842761200626 +/- 0.015740526971611123
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RandomForestClassifier(n_estimators=200)
-0.9550000000000001
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RandomForestClassifier(max_features=&#39;sqrt&#39;)
+0.9359999999999999
 </pre></div>
 </div>
 </div>
@@ -1623,7 +1649,7 @@ Mean AUC: 0.8990842761200626 +/- 0.015740526971611123
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.968, 0.9696139801773604)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.944, 0.9444551220449741)
 </pre></div>
 </div>
 </div>
@@ -1750,48 +1776,18 @@ Mean AUC: 0.8990842761200626 +/- 0.015740526971611123
 <span class="g g-Whitespace">    </span><span class="mi">171</span>         <span class="n">tree</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span><span class="o">=</span><span class="n">sample_weight</span><span class="p">,</span> <span class="n">check_input</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="nn">~/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/tree/_classes.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight, check_input, X_idx_sorted)</span>
-<span class="g g-Whitespace">    </span><span class="mi">896</span>         <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">897</span><span class="sd"> </span>
-<span class="ne">--&gt; </span><span class="mi">898</span><span class="sd">         super().fit(</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span><span class="sd">             X, y,</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span><span class="sd">             sample_weight=sample_weight,</span>
+<span class="g g-Whitespace">    </span><span class="mi">896</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">897</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">898</span><span class="s2">         super().fit(</span>
+<span class="g g-Whitespace">    </span><span class="mi">899</span><span class="s2">             X, y,</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span><span class="s2">             sample_weight=sample_weight,</span>
 
 <span class="nn">~/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/tree/_classes.py</span> in <span class="ni">fit</span><span class="nt">(self, X, y, sample_weight, check_input, X_idx_sorted)</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd">         if is_classification:</span>
-<span class="ne">--&gt; </span><span class="mi">190</span><span class="sd">             check_classification_targets(y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span><span class="sd">             y = np.copy(y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">192</span><span class="sd"> </span>
-
-<span class="nn">~/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/utils/multiclass.py</span> in <span class="ni">check_classification_targets</span><span class="nt">(y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">178</span><span class="sd">     y : array-like</span>
-<span class="g g-Whitespace">    </span><span class="mi">179</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">180</span>     <span class="n">y_type</span> <span class="o">=</span> <span class="n">type_of_target</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="k">if</span> <span class="n">y_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;binary&#39;</span><span class="p">,</span> <span class="s1">&#39;multiclass&#39;</span><span class="p">,</span> <span class="s1">&#39;multiclass-multioutput&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span>                       <span class="s1">&#39;multilabel-indicator&#39;</span><span class="p">,</span> <span class="s1">&#39;multilabel-sequences&#39;</span><span class="p">]:</span>
-
-<span class="nn">~/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/utils/multiclass.py</span> in <span class="ni">type_of_target</span><span class="nt">(y)</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>         <span class="k">return</span> <span class="s1">&#39;continuous&#39;</span> <span class="o">+</span> <span class="n">suffix</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span> 
-<span class="ne">--&gt; </span><span class="mi">306</span>     <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="k">return</span> <span class="s1">&#39;multiclass&#39;</span> <span class="o">+</span> <span class="n">suffix</span>  <span class="c1"># [1, 2, 3] or [[1., 2., 3]] or [[1, 2]]</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">unique</span><span class="nt">(*args, **kwargs)</span>
-
-<span class="nn">~/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/numpy/lib/arraysetops.py</span> in <span class="ni">unique</span><span class="nt">(ar, return_index, return_inverse, return_counts, axis)</span>
-<span class="g g-Whitespace">    </span><span class="mi">260</span>     <span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span>     <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">262</span>         <span class="n">ret</span> <span class="o">=</span> <span class="n">_unique1d</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">return_index</span><span class="p">,</span> <span class="n">return_inverse</span><span class="p">,</span> <span class="n">return_counts</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span>         <span class="k">return</span> <span class="n">_unpack_tuple</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">264</span> 
-
-<span class="nn">~/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/numpy/lib/arraysetops.py</span> in <span class="ni">_unique1d</span><span class="nt">(ar, return_index, return_inverse, return_counts)</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>         <span class="n">aux</span> <span class="o">=</span> <span class="n">ar</span><span class="p">[</span><span class="n">perm</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">323</span>         <span class="n">ar</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="n">aux</span> <span class="o">=</span> <span class="n">ar</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">aux</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">bool_</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span><span class="s2">                                            min_impurity_split)</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">389</span><span class="s2">         builder.build(self.tree_, X, y, sample_weight)</span>
+<span class="g g-Whitespace">    </span><span class="mi">390</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">391</span><span class="s2">         if self.n_outputs_ == 1 and is_classifier(self):</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -2317,10 +2313,10 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
             <p class="prev-next-title">Solution - Classification using K Nearest Neighbors</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../contributions.html" title="next page">
+    <a class='right-next' id="next-link" href="../regression_tutorial/regression_guided-SOL.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Contributions</p>
+        <p class="prev-next-title">Regression</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -1,0 +1,1830 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regression &#8212; 2022 Oslo PER Summer Institute Machine Learning Short Course</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Contributions" href="../../contributions.html" />
+    <link rel="prev" title="Solution - A Multiplicity of Models" href="../day-4/Day_4-Multiplicity_of_Models-SOL.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">2022 Oslo PER Summer Institute Machine Learning Short Course</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   2022 Oslo PER Summer Institute Machine Learning Short Course
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Schedule
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule.html">
+   Detailed Schedule
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working with Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-1/Day-1_Getting-Started-with-Pandas.html">
+   Getting Started with Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-1/Day-1_Exploring-data-with-Pandas.html">
+   Exploring data with Pandas
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modeling Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-2/Day-2_Polynomial_Regression.html">
+   Polynomial Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-2/Day-2_Multiple_Regression.html">
+   Multidimensional Linear Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-3/day-3_Getting_Started_with_Classification_Models.html">
+   Getting Started with Classification Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-3/day-3_KNN_classification.html">
+   Classification using K Nearest Neighbors
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Evaluating Models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-4/Day_4-What_is_Tuning_and_Validation.html">
+   What is Tuning and Validation?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-4/Day_4-Multiplicity_of_Models.html">
+   A Multiplicity of Models
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Regression Tutorial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="regression_guided.html">
+   Regression
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html">
+   Solution - Getting Started with Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-1/Day-1_Exploring-data-with-Pandas-SOL.html">
+   Solution - Exploring data with Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-2/Day-2_Polynomial_Regression-SOL.html">
+   Solution - Polynomial Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-2/Day-2_Multiple_Regression-SOL.html">
+   Solution - Multidimensional Linear Regression
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-3/day-3_Getting_Started_with_Classification_Models-SOL.html">
+   Solution - Getting Started with Classification Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-3/day-3_KNN_classification-SOL.html">
+   Solution - Classification using K Nearest Neighbors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day-4/Day_4-Multiplicity_of_Models-SOL.html">
+   Solution - A Multiplicity of Models
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Regression
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Acknowledgements
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contributions.html">
+   Contributions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/regression_tutorial/regression_guided-SOL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dannycab/OPSI_ML_workshop/main?urlpath=lab/tree/notebooks/regression_tutorial/regression_guided-SOL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://jupyterhub.egr.msu.edu/hub/user-redirect/git-pull?repo=https://github.com/dannycab/OPSI_ML_workshop/docs/_build/html/index.html&urlpath=lab/tree/OPSI_ML_workshop/notebooks/regression_tutorial/regression_guided-SOL.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/dannycab/OPSI_ML_workshop/blob/main/notebooks/regression_tutorial/regression_guided-SOL.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-reading">
+     Further reading
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-the-data">
+   1. Import the data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investigate-the-correlations">
+   2. Investigate the correlations
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions">
+     Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling">
+   3. Modeling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splitting-the-data">
+     3.1 Splitting the data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-and-scoring-the-model">
+     3.2 Creating and scoring the model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysing-the-model-output">
+   4. Analysing the model output
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predicting-from-test-data">
+     4.1 Predicting from test data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-the-residuals-of-the-model">
+     4.2 Inspecting the residuals of the model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-features-training-and-fitting">
+   5. Model Features - training and fitting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-fit-coefficients">
+     Finding fit coefficients
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-features-predicting">
+   6. Model Features - predicting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-the-explained-variance">
+     Finding the explained variance
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-regressors">
+     7. Other regressors
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-the-model">
+     7.1 Creating the model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     7.2 Predicting from test data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     7.3 Inspecting the residuals of the model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-feature-importances">
+     7.4 Finding feature importances
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Regression</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-reading">
+     Further reading
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data">
+     Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-the-data">
+   1. Import the data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investigate-the-correlations">
+   2. Investigate the correlations
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questions">
+     Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling">
+   3. Modeling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splitting-the-data">
+     3.1 Splitting the data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-and-scoring-the-model">
+     3.2 Creating and scoring the model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysing-the-model-output">
+   4. Analysing the model output
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predicting-from-test-data">
+     4.1 Predicting from test data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-the-residuals-of-the-model">
+     4.2 Inspecting the residuals of the model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-features-training-and-fitting">
+   5. Model Features - training and fitting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-fit-coefficients">
+     Finding fit coefficients
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-features-predicting">
+   6. Model Features - predicting
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-the-explained-variance">
+     Finding the explained variance
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-regressors">
+     7. Other regressors
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-the-model">
+     7.1 Creating the model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     7.2 Predicting from test data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     7.3 Inspecting the residuals of the model
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-feature-importances">
+     7.4 Finding feature importances
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="regression">
+<h1>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">¶</a></h1>
+<p>Regression modeling is any attempt to predict or explain a continous variable from a collection of input data. This could be student GPA, the position of a planet orbiting a sun, or the color of a pixel in a photo. Values such as whether a student is a STEM student or not, the probability of an event occuring (such as changing a major, an earthquake) are not regression tasks (they are classification).</p>
+<p>After completing this tutorial you should be able to:</p>
+<ul class="simple">
+<li><p>use <code class="docutils literal notranslate"><span class="pre">sci-kit</span> <span class="pre">learn</span></code> to split data into training and testing sets</p></li>
+<li><p>understand the model, fit, score paradigm in <code class="docutils literal notranslate"><span class="pre">sci-kit</span> <span class="pre">learn</span></code> and apply it to a problem</p></li>
+<li><p>understand the most important visualizations of regression analysis: actual vs. predicted, actual vs. residuals, residuals distribution vs. assumed theoretical distribution (in case of OLS models)</p></li>
+<li><p>have a conceptual understanding of the basic goal of any regression task</p></li>
+<li><p>have some understanding that most statistical “tests” are typically just specific solutions of a linear regression problem</p></li>
+<li><p>have some understanding of the assumptions of linear models</p></li>
+</ul>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Hands on machine learning, probably the best practical machine learning textbook ever written <a class="reference external" href="https://github.com/ageron/handson-ml">https://github.com/ageron/handson-ml</a></p></li>
+<li><p>Common statistical tests are linear models, stop thinking statistics are something other than y=mx+b, they are not. lol. <a class="reference external" href="https://lindeloev.github.io/tests-as-linear/?fbclid=IwAR09Rp4Vv18fOO4lg0ITnCYJICCC1iuzeq-tNYPWsnmK6CrGgdErpvHfyWE">https://lindeloev.github.io/tests-as-linear/?fbclid=IwAR09Rp4Vv18fOO4lg0ITnCYJICCC1iuzeq-tNYPWsnmK6CrGgdErpvHfyWE</a></p></li>
+</ol>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>Here is a file named <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">regression_data.csv</span></code></span>. Import the data like you did in the previous tutorial “exploring data”. The first step in any regression task is to explore the data the raw data.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="import-the-data">
+<h1>1. Import the data<a class="headerlink" href="#import-the-data" title="Permalink to this headline">¶</a></h1>
+<p>We will first need to import the data. To do so, we need to first import the relevant libraries that are necessary to import and visualize the data. Then, we can import the data into a dataframe for analysis.</p>
+<ol class="simple">
+<li><p>First import the <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, and <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> libraries</p></li>
+<li><p>Then, import the data into a data frame using the <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> method.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/regression_data.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cGPA</th>
+      <th>attendance</th>
+      <th>passed_percent</th>
+      <th>sex</th>
+      <th>hsGPA</th>
+      <th>ethnicity</th>
+      <th>fci_post</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.083621</td>
+      <td>51.137226</td>
+      <td>48.929495</td>
+      <td>1.0</td>
+      <td>2.642089</td>
+      <td>2.0</td>
+      <td>14.618734</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.043927</td>
+      <td>47.819398</td>
+      <td>31.298644</td>
+      <td>1.0</td>
+      <td>1.872415</td>
+      <td>2.0</td>
+      <td>10.652295</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2.147087</td>
+      <td>34.160519</td>
+      <td>32.312813</td>
+      <td>0.0</td>
+      <td>2.068908</td>
+      <td>2.0</td>
+      <td>7.546426</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.286152</td>
+      <td>55.850494</td>
+      <td>43.496181</td>
+      <td>0.0</td>
+      <td>2.058815</td>
+      <td>2.0</td>
+      <td>14.041647</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.519186</td>
+      <td>77.501019</td>
+      <td>39.407797</td>
+      <td>0.0</td>
+      <td>1.932764</td>
+      <td>2.0</td>
+      <td>15.960932</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="investigate-the-correlations">
+<h1>2. Investigate the correlations<a class="headerlink" href="#investigate-the-correlations" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have the data imported, you can see there’s 7 variables for each student record. We are attempting to see what factors are connected with <code class="docutils literal notranslate"><span class="pre">fci_post</span></code> as we want to try to predict a measure of conceptual understanding. To do that it would be useful to see how each variable to correlates with the <code class="docutils literal notranslate"><span class="pre">fci_post</span></code> score.</p>
+<p>We can do this in a couple ways.</p>
+<ol class="simple">
+<li><p>We can use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> method <code class="docutils literal notranslate"><span class="pre">corr</span></code> to see the correlation coefficients. <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html">[How to use corr]</a></p></li>
+<li><p>We can use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> plotting library to visualize the correlations. <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.plotting.scatter_matrix.html">[How to use scatter_matrix]</a></p></li>
+</ol>
+<div class="section" id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+<p>Once you complete these correlational analysis, answer these questions.</p>
+<ol class="simple">
+<li><p>Which variables most strongly correlate with <code class="docutils literal notranslate"><span class="pre">fci_post</span></code>?</p></li>
+<li><p>Is there any conflict between the information gained from <code class="docutils literal notranslate"><span class="pre">corr</span></code> and <code class="docutils literal notranslate"><span class="pre">scatter_matrix</span></code>? That is, does one provide better information about correlations?</p></li>
+<li><p>Which variables might you expect to appear predictive in a model?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cGPA</th>
+      <th>attendance</th>
+      <th>passed_percent</th>
+      <th>sex</th>
+      <th>hsGPA</th>
+      <th>ethnicity</th>
+      <th>fci_post</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cGPA</th>
+      <td>1.000000</td>
+      <td>-0.379050</td>
+      <td>0.098558</td>
+      <td>-0.000698</td>
+      <td>0.014864</td>
+      <td>-0.006504</td>
+      <td>0.429689</td>
+    </tr>
+    <tr>
+      <th>attendance</th>
+      <td>-0.379050</td>
+      <td>1.000000</td>
+      <td>0.198594</td>
+      <td>-0.017965</td>
+      <td>-0.014733</td>
+      <td>-0.024063</td>
+      <td>0.369330</td>
+    </tr>
+    <tr>
+      <th>passed_percent</th>
+      <td>0.098558</td>
+      <td>0.198594</td>
+      <td>1.000000</td>
+      <td>0.023502</td>
+      <td>0.021640</td>
+      <td>-0.020883</td>
+      <td>0.568117</td>
+    </tr>
+    <tr>
+      <th>sex</th>
+      <td>-0.000698</td>
+      <td>-0.017965</td>
+      <td>0.023502</td>
+      <td>1.000000</td>
+      <td>0.026238</td>
+      <td>-0.021709</td>
+      <td>-0.004709</td>
+    </tr>
+    <tr>
+      <th>hsGPA</th>
+      <td>0.014864</td>
+      <td>-0.014733</td>
+      <td>0.021640</td>
+      <td>0.026238</td>
+      <td>1.000000</td>
+      <td>-0.035986</td>
+      <td>0.010453</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>-0.006504</td>
+      <td>-0.024063</td>
+      <td>-0.020883</td>
+      <td>-0.021709</td>
+      <td>-0.035986</td>
+      <td>1.000000</td>
+      <td>-0.029876</td>
+    </tr>
+    <tr>
+      <th>fci_post</th>
+      <td>0.429689</td>
+      <td>0.369330</td>
+      <td>0.568117</td>
+      <td>-0.004709</td>
+      <td>0.010453</td>
+      <td>-0.029876</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting._misc</span> <span class="kn">import</span> <span class="n">scatter_matrix</span>
+<span class="n">axes</span><span class="o">=</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/regression_guided-SOL_5_0.png" src="../../_images/regression_guided-SOL_5_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="modeling">
+<h1>3. Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h1>
+<p>Modeling data is as much an art as it is science. There is no “true” model, there is only a model that reduces error to an acceptable amount. Most models attempt to do this automatically by minimizing some sort of cost function (or error) using some kind of solver algorithm. These solving methods are beyond the scope of this workshop but are important to know they exist and somewhat how they work. If you are interested in this sort of thing I recommend starting with <a class="reference external" href="https://stats.stackexchange.com/questions/160179/do-we-need-gradient-descent-to-find-the-coefficients-of-a-linear-regression-mode">this stats exchange thread</a> and googling each solver in the answer that seems interesting. This is only for Linear Least Squares models but its a good place to start.</p>
+<p>For this analysis, we will use the paradigm that we discussed where we split the data into a training set the develop the model and then use the model to predict the outcomes of a test set.</p>
+<img src="https://raw.githubusercontent.com/learningmachineslab/tutorials/master/docs/slides/figures/ml_process.png" width=800 />
+<div class="section" id="splitting-the-data">
+<h2>3.1 Splitting the data<a class="headerlink" href="#splitting-the-data" title="Permalink to this headline">¶</a></h2>
+<p>We first need to split the data into a training set and a test set. To do this, we will also need to know which variable we intend to predict. The library <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> has builtin methods for doing this splitting, so we will also need to import it. Notice that you can import a library any time that you need to.</p>
+<ol class="simple">
+<li><p>Import <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> from <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code>.</p></li>
+<li><p>Look at your data and determine which columns will be the input features of your model and which will be the predicted variable. You might find using <code class="docutils literal notranslate"><span class="pre">columns</span></code> useful. <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.columns.html">[Return column labels]</a></p></li>
+<li><p>Split the data into training and testing data sets using the <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection</span></code> method <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">[How to use train_test_split]</a></p></li>
+</ol>
+<div class="section" id="id1">
+<h3>Questions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>How large is the training data set?</p></li>
+<li><p>How can you change the amount of data used in the training set? <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">[How to use train_test_split]</a></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;cGPA&#39;, &#39;attendance&#39;, &#39;passed_percent&#39;, &#39;sex&#39;, &#39;hsGPA&#39;, &#39;ethnicity&#39;,
+       &#39;fci_post&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cGPA&#39;</span><span class="p">,</span><span class="s1">&#39;attendance&#39;</span><span class="p">,</span><span class="s1">&#39;passed_percent&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;hsGPA&#39;</span><span class="p">,</span> <span class="s1">&#39;ethnicity&#39;</span><span class="p">]</span>
+<span class="n">output</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fci_post&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cGPA</th>
+      <th>attendance</th>
+      <th>passed_percent</th>
+      <th>sex</th>
+      <th>hsGPA</th>
+      <th>ethnicity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.083621</td>
+      <td>51.137226</td>
+      <td>48.929495</td>
+      <td>1.0</td>
+      <td>2.642089</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.043927</td>
+      <td>47.819398</td>
+      <td>31.298644</td>
+      <td>1.0</td>
+      <td>1.872415</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2.147087</td>
+      <td>34.160519</td>
+      <td>32.312813</td>
+      <td>0.0</td>
+      <td>2.068908</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.286152</td>
+      <td>55.850494</td>
+      <td>43.496181</td>
+      <td>0.0</td>
+      <td>2.058815</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.519186</td>
+      <td>77.501019</td>
+      <td>39.407797</td>
+      <td>0.0</td>
+      <td>1.932764</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3995</th>
+      <td>2.067698</td>
+      <td>52.941889</td>
+      <td>65.051548</td>
+      <td>1.0</td>
+      <td>2.107277</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3996</th>
+      <td>2.449005</td>
+      <td>63.282221</td>
+      <td>54.918656</td>
+      <td>0.0</td>
+      <td>2.205480</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3997</th>
+      <td>2.227918</td>
+      <td>52.155313</td>
+      <td>52.040404</td>
+      <td>1.0</td>
+      <td>1.679202</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3998</th>
+      <td>2.341053</td>
+      <td>46.928807</td>
+      <td>62.977916</td>
+      <td>0.0</td>
+      <td>2.468935</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3999</th>
+      <td>2.582593</td>
+      <td>50.484197</td>
+      <td>63.746409</td>
+      <td>0.0</td>
+      <td>0.276639</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>4000 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">output</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-and-scoring-the-model">
+<h2>3.2 Creating and scoring the model<a class="headerlink" href="#creating-and-scoring-the-model" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have split the data into training and test sets, we can build a model of the training set. We will focus first on a linear model using an ordinary least squares (OLS) fit. This is likely a model that you are familiar with, particularly for lines of best fit between two measurements. The general approach is to construct a linear model for student records that minimizes the error using OLS. to do this we need to import the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> method from <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model</span></code>, then create a model, fit it, and score it. <em>Notice: this approach to using linear regression with sci-kit learn is quite similar across other regression methods.</em></p>
+<ol class="simple">
+<li><p>Import the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> method from <code class="docutils literal notranslate"><span class="pre">sklearn.linear_model</span></code> <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression">[How to use LinearRegression]</a></p></li>
+<li><p>Create an OLS model and fit it.</p></li>
+<li><p>Score the model using your model’s built in <code class="docutils literal notranslate"><span class="pre">score</span></code> method.</p></li>
+</ol>
+<div class="section" id="id2">
+<h3>Questions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What does score represent? What is it summarizing? <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression.score">[The score method]</a></p></li>
+<li><p>Are we justified in using a linear model? <a class="reference external" href="https://statisticsbyjim.com/regression/ols-linear-regression-assumptions/">[Read about assumptions of linear models]</a></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LR</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">LR</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinearRegression()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LR</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7046531187010654
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="analysing-the-model-output">
+<h1>4. Analysing the model output<a class="headerlink" href="#analysing-the-model-output" title="Permalink to this headline">¶</a></h1>
+<p>Now that we have established the goal of the model is to minimize the error, created a model, and found a score for the model, we still must recognize that the model has some error. The error/residual is really just the linear distance from the model “plane” to the predicted value as shown below:</p>
+<img src="https://miro.medium.com/max/860/1*40E7lY7o39jddXBKQypeTA.png"/>
+<p>These residuals are data in their own right. But instead of being data about students, courses, etc. they are data about the model and how it is giving predictions. Thus we can use them to describe the model performance.</p>
+<div class="section" id="predicting-from-test-data">
+<h2>4.1 Predicting from test data<a class="headerlink" href="#predicting-from-test-data" title="Permalink to this headline">¶</a></h2>
+<p>We will start by investigating how well our model, constructed from the training set, predicts the scores from test set.</p>
+<ol class="simple">
+<li><p>Create predicted data using the model’s <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p></li>
+<li><p>Make a scatter plot to compare it to the actual values and draw a diagonal through this plot.</p></li>
+</ol>
+<div class="section" id="id3">
+<h3>Questions<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What “shape” does the scatter plot “blob” look like?</p></li>
+<li><p>Does the “blob” follow the diagonal line or does it deviate in some way?</p></li>
+<li><p>Can you tell if the model over or under predicts scores in the test set?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="n">LR</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">predicted</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Predicted FCI score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Actual FCI Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Actual FCI Score&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_17_1.png" src="../../_images/regression_guided-SOL_17_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inspecting-the-residuals-of-the-model">
+<h2>4.2 Inspecting the residuals of the model<a class="headerlink" href="#inspecting-the-residuals-of-the-model" title="Permalink to this headline">¶</a></h2>
+<p>One of the major assumptions of a linear model is that error is normall distributed. Basically, we aim for the error in the model to be distributed equally around zero, so that there’s little <a class="reference external" href="https://statisticsbyjim.com/regression/heteroscedasticity-regression/">heteroscedasticity</a>. If a linear model has errors that are not normally dsitributed, we are might be in a little be of trouble with regard to believing the model, and we might have to try another modeling approach. One way to look into this is to compute and plot the residuals. They should be roughly normally distributed if we are justfied in using a linear model. This analysis will tell us if our model tends to overpredict or underpredict scores and for which scores it does so.</p>
+<ol class="simple">
+<li><p>Write a function to calculate the residuals of the model.</p></li>
+<li><p>Plot the actual values versus the residuals using a scatter plot. (<em>This is the most common way of seeing a residual analysis in practice.</em>)</p></li>
+<li><p>Collapse the residual scatter plot into a histogram. (<em>This is a useful visualization to see the normality of the distribution</em>) <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html">[How to plot a histogram]</a></p></li>
+</ol>
+<div class="section" id="id4">
+<h3>Questions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Do we appear to be justified in using a linear model?</p></li>
+<li><p>Does the model tend to overpredict or underpredict certain groups of scores?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_residuals</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">predicted</span> <span class="o">-</span> <span class="n">actual</span>
+
+<span class="n">residuals</span> <span class="o">=</span> <span class="n">calculate_residuals</span><span class="p">(</span><span class="n">actual</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predicted</span><span class="o">=</span><span class="n">predicted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">residuals</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Residuals&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Actual&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Actual&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_20_1.png" src="../../_images/regression_guided-SOL_20_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">residuals</span><span class="p">[</span><span class="s1">&#39;fci_post&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Residuals&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Counts&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Counts&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_21_1.png" src="../../_images/regression_guided-SOL_21_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="model-features-training-and-fitting">
+<h1>5. Model Features - training and fitting<a class="headerlink" href="#model-features-training-and-fitting" title="Permalink to this headline">¶</a></h1>
+<p>All models have some input data X and some output prediction Y. The input data X is of the shape <span class="math notranslate nohighlight">\(m \times n\)</span>, so that means there are <span class="math notranslate nohighlight">\(m\)</span> columns (or features) and <span class="math notranslate nohighlight">\(n\)</span> data “points” (or vectors if <span class="math notranslate nohighlight">\(m&gt;1\)</span>). For many models, you can return values from the model that give some indication as to how “important” each particular feature is to the model’s training. Typically, the larger the magnitude of this value, the more important the feature is for prediction. This value for linear models is called the model <em>coefficients</em>. It may also be called <em>feature importance</em>. These values are always calculated from the data that was used to train (fit) the model. Thus, they don’t really tell us about how important the features are for new data, rather how important the features were in deciding the “shape” of the model itself.</p>
+<div class="section" id="finding-fit-coefficients">
+<h2>Finding fit coefficients<a class="headerlink" href="#finding-fit-coefficients" title="Permalink to this headline">¶</a></h2>
+<p>For our linear model, the coefficients are related to the correlation between each input varaiable and the output prediction. Earlier you looked at the correlations between each input variable and the output variable. Now, we return the linear fit coefficients and plots them to see which features are most “important” to our model. <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> has a builtin attribute <code class="docutils literal notranslate"><span class="pre">coef_</span></code> that returns these fit coefficients.</p>
+<ol class="simple">
+<li><p>Return the fit coefficients using <code class="docutils literal notranslate"><span class="pre">coef_</span></code></p></li>
+<li><p>Make a bar graph of all the features in the model. <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.barh.html">[How to make a horizontal bar plot]</a></p></li>
+</ol>
+<div class="section" id="id5">
+<h3>Questions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Which is the most important feature for fitting?</p></li>
+<li><p>Which is least important?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_coefficients</span> <span class="o">=</span> <span class="n">LR</span><span class="o">.</span><span class="n">coef_</span>
+<span class="n">coefs_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">model_coefficients</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;coef&#39;</span><span class="p">,])</span>
+<span class="n">coefs_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coef</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cGPA</th>
+      <td>6.464318</td>
+    </tr>
+    <tr>
+      <th>attendance</th>
+      <td>0.158036</td>
+    </tr>
+    <tr>
+      <th>passed_percent</th>
+      <td>0.122683</td>
+    </tr>
+    <tr>
+      <th>sex</th>
+      <td>-0.000406</td>
+    </tr>
+    <tr>
+      <th>hsGPA</th>
+      <td>-0.025611</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.006312</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">coefs_df</span><span class="p">[</span><span class="s1">&#39;coef&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_24_1.png" src="../../_images/regression_guided-SOL_24_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="model-features-predicting">
+<h1>6. Model Features - predicting<a class="headerlink" href="#model-features-predicting" title="Permalink to this headline">¶</a></h1>
+<p>The correlary to each feature’s coefficient or importance value, is the amount of variance that feature explains in the prediction. Remember, we have split the data into two separate sets, the training data and the testing data. The test data is never shown to the model until after the model is “fit” to the training data. This secrecy is why we are able to test the predictive power of each model. This secret or “hold out” data can be used to measure the “explained variance” of each coefficient/feature. One method of doing this is called <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html">recursive feature elimination</a>. Essentially, the coefficient of the model are ordered by magnitude, and the smallest are then removed one at a time until only one feature is left. Each iteration the model’s <code class="docutils literal notranslate"><span class="pre">score</span></code> function is called. This provides a ranking based on the predictive power of the features.</p>
+<div class="section" id="finding-the-explained-variance">
+<h2>Finding the explained variance<a class="headerlink" href="#finding-the-explained-variance" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Import <code class="docutils literal notranslate"><span class="pre">RFECV</span></code> from <code class="docutils literal notranslate"><span class="pre">sklearn.feature_selection</span></code>.</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">RFE</span></code> function, calculate the explained variance of each of the features in your model using <code class="docutils literal notranslate"><span class="pre">grid_scores_</span></code>. <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html">[How to use RFE]</a></p></li>
+<li><p>Plot the scores returned for each of the combination of features from largest contributions to smallest as a line plot.</p></li>
+</ol>
+<div class="section" id="id6">
+<h3>Questions<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What fraction of the variance is explained by the whole model?</p></li>
+<li><p>Which input features explain the most variance?</p></li>
+<li><p>Which explain the least and could be dropped in order to find a parsimonious model?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFECV</span>
+<span class="n">rfe</span> <span class="o">=</span> <span class="n">RFECV</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">LinearRegression</span><span class="p">(),</span> <span class="p">)</span>
+<span class="n">rfe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RFECV(estimator=LinearRegression())
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rfe</span><span class="o">.</span><span class="n">grid_scores_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/caballero/opt/anaconda3/envs/JupyterBook/lib/python3.10/site-packages/sklearn/utils/deprecation.py:103: FutureWarning: The `grid_scores_` attribute is deprecated in version 1.0 in favor of `cv_results_` and will be removed in version 1.2.
+  warnings.warn(msg, category=FutureWarning)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.19936427, 0.12559834, 0.18560106, 0.19755517, 0.18403771],
+       [0.43707905, 0.46730567, 0.54265626, 0.56245376, 0.50648166],
+       [0.61288776, 0.62110108, 0.67339007, 0.6985336 , 0.65850214],
+       [0.61284535, 0.62009386, 0.67312415, 0.69830163, 0.65847098],
+       [0.61283675, 0.62001393, 0.67274528, 0.69809628, 0.65843964],
+       [0.6128228 , 0.61994015, 0.67273617, 0.69809436, 0.65842934]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rfe</span><span class="o">.</span><span class="n">grid_scores_</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;R-squared&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;R-squared&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_28_1.png" src="../../_images/regression_guided-SOL_28_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="other-regressors">
+<h2>7. Other regressors<a class="headerlink" href="#other-regressors" title="Permalink to this headline">¶</a></h2>
+<p>We used a linear model, but we could easily subsitute another regressor. Let try an algorithm called “Random Forest”. This algorithm has the ability to weight the features relative to each other. Let’s explore the residuals and the feature importances of the Random Forest algorithm.</p>
+<ol class="simple">
+<li><p>Import the <code class="docutils literal notranslate"><span class="pre">RandomForestRegressor</span></code> method from <code class="docutils literal notranslate"><span class="pre">sklearn.ensemble</span></code> <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html?highlight=random%20forest#sklearn.ensemble.RandomForestRegressor">[How to use RandomForestRegressor]</a></p></li>
+<li><p>Using your train dataset, create your Random Forest model and fit it.</p></li>
+</ol>
+</div>
+<div class="section" id="creating-the-model">
+<h2>7.1 Creating the model<a class="headerlink" href="#creating-the-model" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RF</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">RF</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5_/9z7lhk0s2y95hvkzs6lzdvvc0000gn/T/ipykernel_85689/3759250952.py:2: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples,), for example using ravel().
+  RF.fit(X_train, y_train)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RandomForestRegressor(n_estimators=1000, random_state=42)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>7.2 Predicting from test data<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>Just like for the OLS model above, we will start by investigating how well our model, constructed from the training set, predicts the scores from test set.</p>
+<ol class="simple">
+<li><p>Create predicted data using the model’s <code class="docutils literal notranslate"><span class="pre">predict</span></code> method.</p></li>
+<li><p>Score the accuracy of your model by calculating the <code class="docutils literal notranslate"><span class="pre">mean_squared_error</span></code> between the predictions from your fit model and your test dataset outcomes.</p></li>
+<li><p>Make a scatter plot to compare it to the actual values and draw a diagonal through this plot.</p></li>
+</ol>
+<div class="section" id="id8">
+<h3>Questions<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>What does the root mean squared error tell us? How does it compare to the <code class="docutils literal notranslate"><span class="pre">score</span></code> from the OLS model above?</p></li>
+<li><p>What “shape” does the scatter plot “blob” look like? How does it compare to the Linear Regression plot we made above?</p></li>
+<li><p>Does the “blob” follow the diagonal line or does it deviate in some way?</p></li>
+<li><p>Can you tell if the model over or under predicts scores in the test set?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="n">RF</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="c1">## Unfortunately the &#39;predict&#39; function for RandomForestRegressor is in a different shape than the predict function for LinearRegression</span>
+<span class="c1">## We need to reshape this array in order to calculate the errors</span>
+<span class="n">predicted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">predicted</span><span class="p">,(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean Absolute Error:&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">.</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predicted</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean Squared Error:&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predicted</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Root Mean Squared Error:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average fci_post score:&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fci_post&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Absolute Error: 1.5442726715355475
+Mean Squared Error: 4.0386074599325195
+Root Mean Squared Error: 2.009628687079412
+Average fci_post score: 17.347833832521747
+</pre></div>
+</div>
+</div>
+</div>
+<p>With 1000 trees, the root mean squared error is 2.01 which is greater than 10 percent of the average fci_post score i.e. 1.73. This may indicate, among other things, that we have not used enough estimators (trees). Computational power issue??</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">predicted</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Predicted FCI score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Actual FCI Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Actual FCI Score&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_37_1.png" src="../../_images/regression_guided-SOL_37_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>7.3 Inspecting the residuals of the model<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Write a function to calculate the residuals of the model.</p></li>
+<li><p>Plot the actual values versus the residuals using a scatter plot. (<em>This is the most common way of seeing a residual analysis in practice.</em>)</p></li>
+<li><p>Collapse the residual scatter plot into a histogram. (<em>This is a useful visualization to see the normality of the distribution</em>) <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html">[How to plot a histogram]</a></p></li>
+</ol>
+<div class="section" id="id10">
+<h3>Questions<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>How does this plot compare to the plot we produced for Linear Regression?</p></li>
+<li><p>Does the model tend to overpredict or underpredict certain groups of scores?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">residuals</span> <span class="o">=</span> <span class="n">calculate_residuals</span><span class="p">(</span><span class="n">actual</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predicted</span><span class="o">=</span><span class="n">predicted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">residuals</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Residuals&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Actual&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Actual&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_40_1.png" src="../../_images/regression_guided-SOL_40_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">residuals</span><span class="p">[</span><span class="s1">&#39;fci_post&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Residuals&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Counts&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Counts&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_41_1.png" src="../../_images/regression_guided-SOL_41_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="finding-feature-importances">
+<h2>7.4 Finding feature importances<a class="headerlink" href="#finding-feature-importances" title="Permalink to this headline">¶</a></h2>
+<p>For our linear model above, the coefficients are related to the correlation between each input varaiable and the output prediction. Earlier you looked at the correlations between each input variable and the output variable. The Random Forest algorithm feature importances says that in a given model these features are most important in explaining the target variable. These importances are relative to each of the other features in your model.</p>
+<ol class="simple">
+<li><p>Return the fit importances using <code class="docutils literal notranslate"><span class="pre">feature_importances_</span></code></p></li>
+<li><p>Make a bar graph of all the features in the model. <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.barh.html">[How to make a horizontal bar plot]</a></p></li>
+</ol>
+<div class="section" id="id11">
+<h3>Questions<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Which is the most important feature for fitting?</p></li>
+<li><p>Which is least important?</p></li>
+<li><p>How do this compare to the coefficients we analyzed in OLS model above?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_importances</span> <span class="o">=</span> <span class="n">RF</span><span class="o">.</span><span class="n">feature_importances_</span>
+<span class="n">import_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">model_importances</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;importances&#39;</span><span class="p">,])</span>
+<span class="n">import_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>importances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cGPA</th>
+      <td>0.290367</td>
+    </tr>
+    <tr>
+      <th>attendance</th>
+      <td>0.273757</td>
+    </tr>
+    <tr>
+      <th>passed_percent</th>
+      <td>0.367543</td>
+    </tr>
+    <tr>
+      <th>sex</th>
+      <td>0.007015</td>
+    </tr>
+    <tr>
+      <th>hsGPA</th>
+      <td>0.050031</td>
+    </tr>
+    <tr>
+      <th>ethnicity</th>
+      <td>0.011286</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">import_df</span><span class="p">[</span><span class="s1">&#39;importances&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../_images/regression_guided-SOL_44_1.png" src="../../_images/regression_guided-SOL_44_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/regression_tutorial"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../day-4/Day_4-Multiplicity_of_Models-SOL.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Solution - A Multiplicity of Models</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../contributions.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contributions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Danny Caballero, Rachel Henderson<br/>
+    
+        &copy; Copyright 2022, Michigan State University.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

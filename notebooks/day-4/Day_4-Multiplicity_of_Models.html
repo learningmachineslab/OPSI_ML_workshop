@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Solution - Getting Started with Pandas" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html" />
+    <link rel="next" title="Regression" href="../regression_tutorial/regression_guided.html" />
     <link rel="prev" title="What is Tuning and Validation?" href="Day_4-What_is_Tuning_and_Validation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -172,6 +172,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Regression Tutorial
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regression_tutorial/regression_guided.html">
+   Regression
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Solutions
  </span>
 </p>
@@ -209,6 +221,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="Day_4-Multiplicity_of_Models-SOL.html">
    Solution - A Multiplicity of Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regression_tutorial/regression_guided-SOL.html">
+   Regression
   </a>
  </li>
 </ul>
@@ -687,118 +704,118 @@ const thebe_selector_output = ".output, .cell_output"
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.562039</td>
-      <td>3.609168</td>
-      <td>-0.712038</td>
-      <td>0.916636</td>
-      <td>-7.064566</td>
-      <td>-1.642581</td>
-      <td>-1.245682</td>
-      <td>-0.840325</td>
-      <td>0.606629</td>
-      <td>-1.540892</td>
-      <td>1.106229</td>
-      <td>0.092065</td>
-      <td>0.698606</td>
-      <td>-0.189915</td>
-      <td>2.563346</td>
-      <td>-1.791472</td>
-      <td>1.427200</td>
-      <td>-1.296743</td>
-      <td>-0.208709</td>
-      <td>0.000829</td>
+      <td>0.869364</td>
+      <td>-1.196560</td>
+      <td>0.706378</td>
+      <td>-0.200267</td>
+      <td>-0.827354</td>
+      <td>0.449251</td>
+      <td>2.013583</td>
+      <td>1.078569</td>
+      <td>1.214294</td>
+      <td>0.413176</td>
+      <td>-0.105645</td>
+      <td>-0.204394</td>
+      <td>2.906317</td>
+      <td>-0.303796</td>
+      <td>-3.180317</td>
+      <td>0.288220</td>
+      <td>-1.914083</td>
+      <td>0.992979</td>
+      <td>-0.390368</td>
+      <td>0.873957</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.370060</td>
-      <td>-0.675965</td>
-      <td>1.493001</td>
-      <td>-0.318153</td>
-      <td>-0.591171</td>
-      <td>0.074423</td>
-      <td>0.618235</td>
-      <td>0.205240</td>
-      <td>-1.114182</td>
-      <td>-0.335596</td>
-      <td>0.864933</td>
-      <td>-1.332480</td>
-      <td>0.040021</td>
-      <td>-0.970453</td>
-      <td>-0.353556</td>
-      <td>-0.171633</td>
-      <td>1.134477</td>
-      <td>-0.769199</td>
-      <td>-0.289234</td>
-      <td>0.846662</td>
+      <td>1.924020</td>
+      <td>1.713131</td>
+      <td>-0.362570</td>
+      <td>-0.108166</td>
+      <td>-0.293502</td>
+      <td>-0.605696</td>
+      <td>-0.125982</td>
+      <td>1.531162</td>
+      <td>1.228294</td>
+      <td>-1.932957</td>
+      <td>-0.275633</td>
+      <td>0.411865</td>
+      <td>2.358222</td>
+      <td>0.720600</td>
+      <td>-2.367881</td>
+      <td>0.698971</td>
+      <td>-1.012667</td>
+      <td>0.696141</td>
+      <td>1.947233</td>
+      <td>0.785118</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.673282</td>
-      <td>-1.238983</td>
-      <td>1.420138</td>
-      <td>1.216882</td>
-      <td>-2.982824</td>
-      <td>0.360275</td>
-      <td>-0.113610</td>
-      <td>-1.041913</td>
-      <td>0.688466</td>
-      <td>-0.195281</td>
-      <td>0.355885</td>
-      <td>0.821515</td>
-      <td>1.070486</td>
-      <td>1.593336</td>
-      <td>1.152320</td>
-      <td>0.340130</td>
-      <td>2.845120</td>
-      <td>-1.337082</td>
-      <td>-0.918087</td>
-      <td>-1.058410</td>
+      <td>0.298701</td>
+      <td>-1.148036</td>
+      <td>-0.359964</td>
+      <td>0.819245</td>
+      <td>0.914826</td>
+      <td>0.837359</td>
+      <td>0.962104</td>
+      <td>-0.805976</td>
+      <td>-0.538113</td>
+      <td>-0.760527</td>
+      <td>-1.376731</td>
+      <td>-0.139267</td>
+      <td>0.167219</td>
+      <td>-1.752449</td>
+      <td>1.169882</td>
+      <td>-0.977206</td>
+      <td>-0.716437</td>
+      <td>0.141194</td>
+      <td>-0.820600</td>
+      <td>-0.487169</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.686601</td>
-      <td>0.914246</td>
-      <td>1.297632</td>
-      <td>-0.678378</td>
-      <td>0.194244</td>
-      <td>0.990979</td>
-      <td>0.313253</td>
-      <td>0.158867</td>
-      <td>0.386832</td>
-      <td>-3.065053</td>
-      <td>-1.447627</td>
-      <td>-1.241734</td>
-      <td>-0.846882</td>
-      <td>0.548196</td>
-      <td>-1.757039</td>
-      <td>0.528968</td>
-      <td>2.295146</td>
-      <td>1.613965</td>
-      <td>1.289688</td>
-      <td>-0.823273</td>
+      <td>-0.392281</td>
+      <td>-0.946013</td>
+      <td>0.422102</td>
+      <td>0.074792</td>
+      <td>-0.098930</td>
+      <td>-0.909973</td>
+      <td>0.798157</td>
+      <td>1.043024</td>
+      <td>-1.996910</td>
+      <td>0.315589</td>
+      <td>0.750023</td>
+      <td>-1.257860</td>
+      <td>-2.417057</td>
+      <td>1.554599</td>
+      <td>0.785369</td>
+      <td>-0.811115</td>
+      <td>0.894902</td>
+      <td>-1.708792</td>
+      <td>-0.801130</td>
+      <td>1.786857</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.316746</td>
-      <td>-0.365131</td>
-      <td>1.556934</td>
-      <td>-0.548101</td>
-      <td>-0.486588</td>
-      <td>0.172501</td>
-      <td>-0.221205</td>
-      <td>0.131512</td>
-      <td>0.449519</td>
-      <td>-0.239554</td>
-      <td>-0.421392</td>
-      <td>-0.657093</td>
-      <td>-0.035251</td>
-      <td>-0.768769</td>
-      <td>-0.046676</td>
-      <td>1.164829</td>
-      <td>0.800342</td>
-      <td>-0.311623</td>
-      <td>1.148763</td>
-      <td>-1.405106</td>
+      <td>0.225602</td>
+      <td>-0.006789</td>
+      <td>1.039778</td>
+      <td>0.768261</td>
+      <td>-0.944823</td>
+      <td>-0.326824</td>
+      <td>0.097458</td>
+      <td>1.117454</td>
+      <td>-0.883214</td>
+      <td>-0.137175</td>
+      <td>0.543861</td>
+      <td>0.449890</td>
+      <td>0.961447</td>
+      <td>0.685399</td>
+      <td>-0.517065</td>
+      <td>0.432725</td>
+      <td>-0.363626</td>
+      <td>2.321025</td>
+      <td>1.823551</td>
+      <td>-3.338117</td>
     </tr>
   </tbody>
 </table>
@@ -839,7 +856,7 @@ const thebe_selector_output = ".output, .cell_output"
     </tr>
     <tr>
       <th>1</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
@@ -847,11 +864,11 @@ const thebe_selector_output = ".output, .cell_output"
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -922,8 +939,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[101  12]
- [ 18 119]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 82  42]
+ [ 15 111]]
 </pre></div>
 </div>
 </div>
@@ -942,12 +959,12 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       0.85      0.89      0.87       113
-           1       0.91      0.87      0.89       137
+           0       0.85      0.66      0.74       124
+           1       0.73      0.88      0.80       126
 
-    accuracy                           0.88       250
-   macro avg       0.88      0.88      0.88       250
-weighted avg       0.88      0.88      0.88       250
+    accuracy                           0.77       250
+   macro avg       0.79      0.77      0.77       250
+weighted avg       0.78      0.77      0.77       250
 </pre></div>
 </div>
 </div>
@@ -976,7 +993,7 @@ weighted avg       0.88      0.88      0.88       250
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fdfa0aa1640&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb5917b51f0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Day_4-Multiplicity_of_Models_19_1.png" src="../../_images/Day_4-Multiplicity_of_Models_19_1.png" />
@@ -1002,15 +1019,14 @@ weighted avg       0.88      0.88      0.88       250
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Coefficients: [[ 3.53368771e-02  1.49898761e+00  1.63763432e-01  1.25981357e-01
-  -2.68892368e-01 -8.86748205e-02  1.57553145e-03 -1.43525835e-01
-   1.09744772e-01  3.56016164e-01  1.34549587e-01  1.24764436e-01
-  -5.93889644e-02 -1.06783417e-02  6.95682787e-01 -2.03684750e-01
-  -1.61447763e+00  4.42320071e-01  1.21639551e-01  1.27842946e-01]]
-Odds Ratios: [1.03596864 4.47715417 1.17793562 1.13426102 0.76422551 0.91514311
- 1.00157677 0.86629842 1.1159932  1.42763062 1.14402139 1.13288156
- 0.94234016 0.98937847 2.00507765 0.81571949 0.19899459 1.55631379
- 1.12934696 1.13637452]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model Coefficients: [[ 0.01913687  0.15553518 -0.08204046  0.22852419 -0.16766014 -0.09590977
+   0.10326113  0.09161676 -0.05114566  0.20101232  0.1925027  -0.06846121
+   0.48208684 -0.09569266 -0.89970716  0.04509566 -0.0239074   0.1155216
+   0.26685496  0.423256  ]]
+Odds Ratios: [1.01932115 1.16828303 0.92123468 1.25674392 0.84564119 0.90854599
+ 1.10878091 1.09594473 0.95014026 1.22263983 1.21227978 0.93382968
+ 1.61945041 0.90874327 0.40668874 1.04612793 0.97637612 1.12245876
+ 1.30585103 1.52692513]
 </pre></div>
 </div>
 </div>
@@ -1062,12 +1078,12 @@ Odds Ratios: [1.03596864 4.47715417 1.17793562 1.13426102 0.76422551 0.91514311
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy:  0.896
-AUC: 0.8969144909872346
-Coefs: [[ 0.10744444  1.46632952  0.23882709  0.07639986 -0.27814365  0.04318447
-   0.21942387  0.02316112  0.11284569  0.31513707  0.13166978  0.10469471
-  -0.05310278 -0.01533743  0.69134974 -0.17271131 -1.52635237  0.47332441
-   0.12756639  0.14690737]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy:  0.784
+AUC: 0.7825307377049181
+Coefs: [[ 0.0338189   0.0826044  -0.05071864  0.16907479 -0.10770326 -0.12796946
+   0.11638335 -0.02256085 -0.11293665  0.10594241  0.1475694  -0.00163717
+   0.4753476  -0.12233411 -0.88336909  0.09562799  0.08731965  0.09161151
+   0.18599856  0.46938305]]
 </pre></div>
 </div>
 </div>
@@ -1221,7 +1237,7 @@ Traceback (most recent call last):
 ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties, got elasticnet penalty.
 
   warnings.warn(&quot;Estimator fit failed. The score on this train-test&quot;
-/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.871   nan 0.872]
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.788   nan 0.788]
   warnings.warn(
 </pre></div>
 </div>
@@ -1244,8 +1260,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression(penalty=&#39;none&#39;)
-0.8720000000000001
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
+0.788
 </pre></div>
 </div>
 </div>
@@ -1293,8 +1309,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=16)
-0.8320000000000001
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=12)
+0.867
 </pre></div>
 </div>
 </div>
@@ -1316,7 +1332,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.852, 0.8354297693920334)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.856, 0.8574641732536469)
 </pre></div>
 </div>
 </div>
@@ -1357,8 +1373,8 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.8290933333333333 +/- 0.022253792685492695
-Mean AUC: 0.8294519038700437 +/- 0.021155383917490583
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Accuracy: 0.86604 +/- 0.01906475981140773
+Mean AUC: 0.8660059049822244 +/- 0.019049523664078187
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;AUC&#39;)
@@ -1439,28 +1455,28 @@ Mean AUC: 0.8294519038700437 +/- 0.021155383917490583
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.492727</td>
-      <td>-0.870184</td>
+      <td>-0.658826</td>
+      <td>0.453815</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.635192</td>
-      <td>-0.486344</td>
+      <td>0.693653</td>
+      <td>-0.720309</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.637424</td>
-      <td>0.770513</td>
+      <td>0.793990</td>
+      <td>-0.607930</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.710509</td>
-      <td>0.367664</td>
+      <td>-0.719524</td>
+      <td>0.349693</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.462058</td>
-      <td>-0.653071</td>
+      <td>-0.402906</td>
+      <td>0.915241</td>
     </tr>
   </tbody>
 </table>
@@ -1497,11 +1513,11 @@ Mean AUC: 0.8294519038700437 +/- 0.021155383917490583
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1513,7 +1529,7 @@ Mean AUC: 0.8294519038700437 +/- 0.021155383917490583
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1557,7 +1573,7 @@ Mean AUC: 0.8294519038700437 +/- 0.021155383917490583
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression()
-0.43
+0.45199999999999996
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_validation.py:610: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
@@ -1670,7 +1686,7 @@ Traceback (most recent call last):
 ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties, got elasticnet penalty.
 
   warnings.warn(&quot;Estimator fit failed. The score on this train-test&quot;
-/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [ nan 0.43  nan 0.43]
+/Users/caballero/opt/anaconda3/envs/ml-short-course/lib/python3.9/site-packages/sklearn/model_selection/_search.py:918: UserWarning: One or more of the test scores are non-finite: [  nan 0.452   nan 0.452]
   warnings.warn(
 </pre></div>
 </div>
@@ -1704,7 +1720,7 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fdf60ce15e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fb5b09b8af0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Day_4-Multiplicity_of_Models_57_1.png" src="../../_images/Day_4-Multiplicity_of_Models_57_1.png" />
@@ -1757,10 +1773,10 @@ ValueError: Solver lbfgs supports only &#39;l2&#39; or &#39;none&#39; penalties,
             <p class="prev-next-title">What is Tuning and Validation?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../day-1/Day-1_Getting-Started-with-Pandas-SOL.html" title="next page">
+    <a class='right-next' id="next-link" href="../regression_tutorial/regression_guided.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Solution - Getting Started with Pandas</p>
+        <p class="prev-next-title">Regression</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
