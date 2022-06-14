@@ -52,13 +52,13 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # * generate a corresponding `y_ary`, using the values from `x_ary`, based on the formula $x^4 + 2x^3 -15x^2 -12x + 36$
 # * create `y_noisy`, by adding random (Gaussian) noise to `y_ary` in the range of -15 to 15. Later on we might make the range bigger (say -25 to 25) or smaller (say -5 to 5) for comparison. You will want to use `np.random.normal(avg, std_dev, N)` to do so.
 
-# In[20]:
+# In[2]:
 
 
 # your code here
 
 
-# In[2]:
+# In[3]:
 
 
 ### ANSWER ###
@@ -80,13 +80,13 @@ y_noisy = y_ary + random_noise
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This -  plot `x_ary` vs both `y_ary` and `y_noisy`. Do it overlapping with colors, or side by side, whatever you think would look good. _Make sure to label your axes!_ Consider adding a legend by using: `plt.legend(['Plot 1', 'Plot 2'])`.
 
-# In[22]:
+# In[4]:
 
 
 # your code here
 
 
-# In[3]:
+# In[5]:
 
 
 ### ANSWER ###
@@ -124,7 +124,7 @@ plt.ylabel('y')
 # your code
 
 
-# In[4]:
+# In[7]:
 
 
 ### ANSWER ###
@@ -159,13 +159,13 @@ df.head()
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - Split your data with 20% going to test data and 80% to training (this is a common split ratio in ML). Print the length of the resulting arrays to confirm the split occured as you planned.
 
-# In[29]:
+# In[8]:
 
 
 ## your code here
 
 
-# In[5]:
+# In[9]:
 
 
 ### ANSWER ###
@@ -229,13 +229,13 @@ print(len(X_test))
 # 
 # This process is similar for every `scikit-learn` regression model.
 
-# In[31]:
+# In[10]:
 
 
 # your code here
 
 
-# In[16]:
+# In[11]:
 
 
 ### ANSWER ###
@@ -279,13 +279,13 @@ regression_results(y_test, y_pred)
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This -  Plot `x_ary` vs `y_noisy` and `x_ary` vs the best fitted values based on the adjusted rsquared value. Do it in the same graph. 
 
-# In[15]:
+# In[12]:
 
 
 # your code here
 
 
-# In[17]:
+# In[13]:
 
 
 ### ANSWER ###
@@ -306,13 +306,13 @@ plt.legend(['Truth','Fit'])
 # 
 # <font size=8 color="#009600">&#9998;</font> Do This - Make the two plots mentioned above. Make sure to plot the residuals as a function of the independent variable (`data` or `x`, whatever you called it).
 
-# In[17]:
+# In[14]:
 
 
 ## your code here
 
 
-# In[18]:
+# In[15]:
 
 
 ### ANSWER ###

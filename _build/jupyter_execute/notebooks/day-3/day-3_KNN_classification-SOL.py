@@ -65,13 +65,13 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # <font size=8 color="#009600">&#9998;</font> What's unusual about dtypes? Why?
 
-# In[47]:
+# In[2]:
 
 
 # your code here
 
 
-# In[48]:
+# In[3]:
 
 
 ### ANSWER ###
@@ -94,13 +94,13 @@ bc_data.dtypes
 
 # Can you write code to identify what the problem is? That is, can you provide a DataFrame of the offending rows that are causing the problem? There are lots of ways to do this and, frankly, it is probably a bit hard so don't get hung up too long on this. Give it a try though:
 
-# In[49]:
+# In[4]:
 
 
 # your code here
 
 
-# In[50]:
+# In[5]:
 
 
 ### ANSWER ####
@@ -114,13 +114,13 @@ bc_data[bc_data['Bare Nuclei'] == '?']
 # 
 # Read the data in using `na_values='?'` to replace missing data with `np.nan`. Check the `dtypes` again.
 
-# In[51]:
+# In[6]:
 
 
 # code here
 
 
-# In[52]:
+# In[7]:
 
 
 ### ANSWER ####
@@ -158,13 +158,13 @@ bc_data.dtypes
 # 
 # One last thing: KNN doesn't work with missing data. You will need to use `dropna()` to get rid of them.
 
-# In[53]:
+# In[8]:
 
 
 ## your code here
 
 
-# In[54]:
+# In[9]:
 
 
 ### ANSWER ###
@@ -203,7 +203,7 @@ print('Length of test:',len(Xtest))
 # 
 # More information on KNN from a conceptual persepctive is in the video below.
 
-# In[55]:
+# In[10]:
 
 
 from IPython.display import YouTubeVideo
@@ -228,13 +228,13 @@ YouTubeVideo("HVXime0nQeI",width=640,height=360)
 # 
 # <font size=8 color="#009600">&#9998;</font> Do this. Implement this knn model for your data. What is `ypred`? What does `ypred` look like?
 
-# In[56]:
+# In[11]:
 
 
 # your code
 
 
-# In[57]:
+# In[12]:
 
 
 ### ANSWER ###
@@ -257,13 +257,13 @@ print(ypred)
 # 
 # <font size=8 color="#009600">&#9998;</font> Using this method to print out the confusion matrix. What is the number of TPs, TNs, FPs, and FNs in your model? Can you calculate the accuracy (1 is perfect, 0 is terrible) of the model from these?
 
-# In[58]:
+# In[13]:
 
 
 # your code here
 
 
-# In[59]:
+# In[14]:
 
 
 ### ANSWER ### 
@@ -281,13 +281,13 @@ print("Accuracy:", acc)
 # - Use the `sklearn.metrics` we imported at the top and run the `accuracy_score` on the 0/1 predicted label and the test labels.
 # - Print your accuracy result
 
-# In[60]:
+# In[15]:
 
 
 ## your code here
 
 
-# In[61]:
+# In[16]:
 
 
 print(metrics.accuracy_score(ypred,ytest))
@@ -311,13 +311,13 @@ print(metrics.accuracy_score(ypred,ytest))
 # 
 # How does your model perform compared to the default?
 
-# In[62]:
+# In[17]:
 
 
 ## your code here
 
 
-# In[63]:
+# In[18]:
 
 
 ### ANSWER ###
@@ -341,13 +341,13 @@ print(metrics.accuracy_score(ypred, ytest))
 # 
 # What happens to the accuracy? Is there a good choice of `n_neighbors` to acheive the highest accuracy?
 
-# In[71]:
+# In[19]:
 
 
 ## your code here
 
 
-# In[72]:
+# In[20]:
 
 
 ### ANSWER ###
