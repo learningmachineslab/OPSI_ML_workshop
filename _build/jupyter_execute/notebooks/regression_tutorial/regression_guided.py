@@ -21,7 +21,7 @@
 # 
 # ## Data
 # 
-# Here is a file named [`regression_data.csv`](data/regression_data.csv). Import the data like you did in the previous tutorial "exploring data". The first step in any regression task is to explore the data the raw data.
+# Here is a file named [`regression_data.csv`](https://raw.githubusercontent.com/learningmachineslab/OPSI_ML_workshop/main/notebooks/regression_tutorial/data/regression_data.csv). Import the data like you did in the previous tutorial "exploring data". The first step in any regression task is to explore the data the raw data.
 # 
 # # 1. Import the data
 # 
